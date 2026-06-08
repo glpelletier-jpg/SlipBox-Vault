@@ -1,0 +1,68 @@
+summaries:
+  note.focus_minutes_total: values.sum()
+  note.rating: values.mean().round(1)
+filters:
+  and:
+    - file.inFolder("03-Reviews")
+    - or:
+      - type == "quarterly-review"
+      - type == "quarterly-planning"
+formulas:
+  quest_pct: if(quests_total > 0, (quests_completed / quests_total * 100).round(0) + "%", "—")
+  quarter_label: if(quarter, quarter + " " + year, "")
+  note_type: if(type == "quarterly-review", "📋 Review", if(type == "quarterly-planning", "🎯 Plan", type))
+properties:
+  note.quarter:
+    displayName: Quarter
+  note.year:
+    displayName: Year
+  formula.note_type:
+    displayName: Type
+  note.rating:
+    displayName: Rating /10
+  note.focus_minutes_total:
+    displayName: Focus (min)
+  note.quests_completed:
+    displayName: Quests done
+  note.quests_planned:
+    displayName: Quests planned
+  formula.quest_pct:
+    displayName: Quest %
+views:
+  - type: table
+    name: All quarterly notes
+    order:
+      - formula.quarter_label
+      - formula.note_type
+      - rating
+      - focus_minutes_total
+      - quests_completed
+      - quests_planned
+      - formula.quest_pct
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Reviews only
+    filters:
+      and:
+        - type == "quarterly-review"
+    order:
+      - formula.quarter_label
+      - rating
+      - focus_minutes_total
+      - quests_completed
+      - formula.quest_pct
+    sort:
+      - property: date
+        direction: DESC
+  - type: cards
+    name: Year at a glance
+    filters:
+      and:
+        - year == 2026
+    order:
+      - formula.quarter_label
+      - formula.note_type
+      - rating
+      - quests_completed

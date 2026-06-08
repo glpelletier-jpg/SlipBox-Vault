@@ -1,0 +1,64 @@
+summaries:
+  note.focus_minutes_total: values.sum()
+  note.rating: values.mean().round(1)
+filters:
+  and:
+    - file.inFolder("03-Reviews/Monthly")
+    - type == "monthly-review"
+formulas:
+  month_label: if(month, date(month + "-01").format("MMM YYYY"), "")
+  min_vs_goal: if(focus_minutes_total, (number(focus_minutes_total) / 4800 * 100).round(0) + "%", "—")
+  rating_stars: if(rating, "★".repeat(rating) + "☆".repeat(5 - rating), "—")
+  trend_focus: if(focus_minutes_total >= 4800, "On target", if(focus_minutes_total >= 3600, "Close", "Below"))
+properties:
+  note.month:
+    displayName: Month
+  note.rating:
+    displayName: Rating
+  note.focus_minutes_total:
+    displayName: Focus (min)
+  formula.min_vs_goal:
+    displayName: vs 80hr goal
+  formula.rating_stars:
+    displayName: Month feel
+  formula.trend_focus:
+    displayName: Focus trend
+views:
+  - type: table
+    name: All months
+    order:
+      - formula.month_label
+      - formula.rating_stars
+      - focus_minutes_total
+      - formula.min_vs_goal
+      - formula.trend_focus
+    sort:
+      - property: month
+        direction: DESC
+  - type: table
+    name: This year
+    filters:
+      and:
+        - month >= "2026-01"
+        - month <= "2026-12"
+    order:
+      - formula.month_label
+      - formula.rating_stars
+      - focus_minutes_total
+      - formula.min_vs_goal
+    sort:
+      - property: month
+        direction: ASC
+  - type: cards
+    name: Year overview
+    filters:
+      and:
+        - month >= "2026-01"
+        - month <= "2026-12"
+    order:
+      - formula.month_label
+      - rating
+      - focus_minutes_total
+    sort:
+      - property: month
+        direction: ASC

@@ -1,0 +1,38 @@
+---
+title: Writing down daily goals in the morning is an important habit
+id: 20260225081600
+date: 2026-02-25
+type: fleeting
+tags: [fleeting]
+---
+
+# Writing down daily goals in the morning is an important habit
+
+---
+
+date: 2025-06-03 23:42:59
+created: 2025-06-09 23:48:52
+categories:
+
+- Obsidian Files
+
+---
+
+## Writing down daily goals in the morning is an important habit
+
+Habits MOC %% - metadata: - tags: /habit /PD /2014 - dates: - created: 2014-06-28 - modified: 2020-05-28 %%
+
+### Writing down daily goals in the morning is an important habit
+
+This follows: Journaling in the morning is an important habit (../../PKM/Journaling in the morning is an important habit.md). After journaling, set some broad, simple daily goals.
+
+Daily Goals are a continuation of the Morning Journal. Basically ask yourself: *"What actions and tasks would make today feel like a worthwhile day? How much is realistic? In what order should I do them?"*
+
+Type or write them down. Keep track of them during the day. Adjust as needed. Writing down your daily goals combats those random attentional detours so you can stay on the main road.
+
+If you write out your daily goals, you naturally visualize them and prioritize them in the mind, you have a touchstone with which to check your progress throughout the day. It adds security.
+
+It also tracks easily forgotten "wins" to provide a small sense of accomplishment. See Small Wins foster a Sense of Control (../../PKM/Obsidian/Small Wins foster a Sense of Control.md). There are many days when it feels like you got nothing done. By tracking your daily goals, you save yourself from that false feeling of "never enough" and internalize how much you actually did accomplish. It's a pleasant surprise and completely valid—the daily goals just keeps it in the proper perspective.
+
+**Conclusion** The Morning Journal and Daily Goals are the 1-2 punch to **creating momentum and maintaining it throughout the day**. The importance of this cannot be overstated.
+

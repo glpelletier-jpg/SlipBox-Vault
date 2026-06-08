@@ -1,0 +1,70 @@
+filters:
+  and:
+    - file.inFolder("_docs")
+    - doc_type != ""
+formulas:
+  type_icon: if(doc_type == "master", "📘 Master", if(doc_type == "procedure", "📋 Procedure", if(doc_type == "reference", "🔍 Reference", if(doc_type == "guide", "🛠 Guide", if(doc_type == "state", "📊 State", if(doc_type == "meta", "🤖 Meta", doc_type))))))
+properties:
+  formula.type_icon:
+    displayName: Type
+  note.purpose:
+    displayName: Purpose
+  note.date:
+    displayName: Updated
+views:
+  - type: table
+    name: All docs
+    order:
+      - formula.type_icon
+      - note.file.name
+      - note.purpose
+      - note.date
+    sort:
+      - property: doc_type
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Procedures
+    filters:
+      and:
+        - doc_type == "procedure"
+    order:
+      - note.file.name
+      - note.purpose
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Reference
+    filters:
+      and:
+        - doc_type == "reference"
+    order:
+      - note.file.name
+      - note.purpose
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Guides & Setup
+    filters:
+      and:
+        - doc_type == "guide"
+    order:
+      - note.file.name
+      - note.purpose
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Evaluations
+    filters:
+      and:
+        - file.inFolder("_docs/Evaluations")
+    order:
+      - note.file.name
+      - note.date
+    sort:
+      - property: file.name
+        direction: DESC

@@ -1,0 +1,22 @@
+{
+  "idPolicy": "add-ids",
+  "ignoreDirectories": [
+    "/_archive",
+    "/_attachments",
+    "/_docs",
+    "/_reference",
+    "/_scripts",
+    "/_templates",
+    "/06-Zettelkasten/Fleeting",
+    "/06-Zettelkasten/Literature",
+    "/06-Zettelkasten/Permanent",
+    "/03-Reviews",
+    "/05-Resources",
+    "/00-Home"
+  ],
+  "isDoneDateEnabled": true,
+  "taskImportPolicy": "all",
+  "taskIncludePropertyDefault": true,
+  "shareParentTags": false,
+  "enableNotesAsTasks": false
+}

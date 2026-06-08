@@ -1,0 +1,48 @@
+summaries:
+  note.focus_minutes: values.sum()
+  note.rating: values.mean().round(1)
+filters:
+  and:
+    - file.inFolder("03-Reviews/Weekly")
+    - type == "weekly-review"
+formulas:
+  min_vs_goal: if(focus_minutes, (focus_minutes / 1200 * 100).round(0) + "%", "—")
+  week_label: if(week, week, if(date, date(date).format("MMM D, YYYY"), ""))
+  rating_stars: if(rating, "★".repeat(rating) + "☆".repeat(5 - rating), "—")
+  current_q_start: date(date(now()).format("YYYY") + "-" + if(date(now()).month <= 3, "01-01", if(date(now()).month <= 6, "04-01", if(date(now()).month <= 9, "07-01", "10-01"))))
+  in_current_quarter: date(date) >= formula.current_q_start
+properties:
+  note.date:
+    displayName: Week of
+  note.rating:
+    displayName: Rating
+  note.focus_minutes:
+    displayName: Focus (min)
+  formula.min_vs_goal:
+    displayName: vs 20hr goal
+  formula.rating_stars:
+    displayName: Week feel
+views:
+  - type: table
+    name: All reviews
+    order:
+      - formula.week_label
+      - formula.rating_stars
+      - focus_minutes
+      - formula.min_vs_goal
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: This quarter
+    filters:
+      and:
+        - date(date) >= date(date(now()).format("YYYY") + "-" + if(date(now()).month <= 3, "01-01", if(date(now()).month <= 6, "04-01", if(date(now()).month <= 9, "07-01", "10-01"))))
+    order:
+      - formula.week_label
+      - formula.rating_stars
+      - focus_minutes
+      - formula.min_vs_goal
+    sort:
+      - property: date
+        direction: ASC

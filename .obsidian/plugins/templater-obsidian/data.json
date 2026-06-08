@@ -1,0 +1,98 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "_templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "_scripts",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "04-Daily-Notes",
+      "template": "_templates/Daily Note Template.md"
+    },
+    {
+      "folder": "02-Quests",
+      "template": "_templates/Quest Template.md"
+    },
+    {
+      "folder": "03-Reviews/Weekly",
+      "template": "_templates/Weekly Review Template.md"
+    },
+    {
+      "folder": "03-Reviews/Monthly",
+      "template": "_templates/Monthly Review Template.md"
+    },
+    {
+      "folder": "03-Reviews/Quarterly",
+      "template": "_templates/Quarterly Review Template.md"
+    },
+    {
+      "folder": "05-Resources/Books",
+      "template": "_templates/Book Template.md"
+    },
+    {
+      "folder": "05-Resources/Articles",
+      "template": "_templates/Article Template.md"
+    },
+    {
+      "folder": "05-Resources/Ideas",
+      "template": "_templates/Idea Template.md"
+    },
+    {
+      "folder": "06-Zettelkasten/Fleeting",
+      "template": "_templates/Fleeting Note Template.md"
+    },
+    {
+      "folder": "06-Zettelkasten/Literature",
+      "template": "_templates/Literature Note Template.md"
+    },
+    {
+      "folder": "06-Zettelkasten/Permanent",
+      "template": "_templates/Permanent Note Template.md"
+    },
+    {
+      "folder": "06-Zettelkasten/MOC",
+      "template": "_templates/MOC Template.md"
+    },
+    {
+      "folder": "07-Work-Knowledge/Troubleshooting",
+      "template": "_templates/Troubleshooting Log Template.md"
+    },
+    {
+      "folder": "03-Reviews/Plan-Actual",
+      "template": "_templates/Plan vs Actual Template.md"
+    },
+    {
+      "folder": "03-Reviews/Workouts",
+      "template": "_templates/Workout Log Template.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": [
+    "_templates/startup-weekly-calendar.md"
+  ],
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": ""
+    }
+  ],
+  "script_files_folder": "_scripts"
+}

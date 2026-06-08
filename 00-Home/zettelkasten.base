@@ -1,0 +1,26 @@
+filters:
+  and:
+    - file.inFolder("06-Zettelkasten/Permanent")
+    - type == "permanent"
+formulas:
+  age_days: if(date, (today() - date(date)).days, "")
+  date_label: if(date, date(date).format("MMM D"), "")
+properties:
+  note.date:
+    displayName: Added
+  note.tags:
+    displayName: Tags
+  formula.age_days:
+    displayName: Days old
+  formula.date_label:
+    displayName: Date
+views:
+  - type: table
+    name: Recent permanent notes
+    order:
+      - file.name
+      - formula.date_label
+    sort:
+      - property: date
+        direction: DESC
+    limit: 6

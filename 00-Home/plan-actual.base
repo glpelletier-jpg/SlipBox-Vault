@@ -1,0 +1,86 @@
+filters:
+  and:
+    - type == "plan-actual"
+    - file.inFolder("03-Reviews/Plan-Actual")
+formulas:
+  accuracy_icon: if(planning_accuracy >= 4, "🟢 " + string(planning_accuracy), if(planning_accuracy >= 3, "🟡 " + string(planning_accuracy), if(planning_accuracy > 0, "🔴 " + string(planning_accuracy), "—")))
+  period_label: if(period, period, "weekly")
+  label: if(week, week, if(month, month, if(quarter, quarter, file.name)))
+  over_planned_icon: if(over_planned == true, "⚠️ Yes", if(over_planned == false, "✅ No", "—"))
+properties:
+  formula.period_label:
+    displayName: Period
+  formula.label:
+    displayName: Label
+  formula.accuracy_icon:
+    displayName: Accuracy
+  note.key_shift:
+    displayName: Key shift
+  formula.over_planned_icon:
+    displayName: Over-planned
+views:
+  - type: table
+    name: All reviews
+    order:
+      - formula.period_label
+      - formula.label
+      - formula.accuracy_icon
+      - note.key_shift
+      - formula.over_planned_icon
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Weekly
+    filters:
+      and:
+        - period == "weekly"
+    order:
+      - formula.label
+      - formula.accuracy_icon
+      - note.key_shift
+      - formula.over_planned_icon
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Monthly
+    filters:
+      and:
+        - period == "monthly"
+    order:
+      - formula.label
+      - formula.accuracy_icon
+      - note.key_shift
+      - formula.over_planned_icon
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Quarterly
+    filters:
+      and:
+        - period == "quarterly"
+    order:
+      - formula.label
+      - formula.accuracy_icon
+      - note.key_shift
+      - formula.over_planned_icon
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Needs attention (≤ 3)
+    filters:
+      and:
+        - planning_accuracy > 0
+        - planning_accuracy <= 3
+    order:
+      - formula.period_label
+      - formula.label
+      - formula.accuracy_icon
+      - note.key_shift
+      - formula.over_planned_icon
+    sort:
+      - property: date
+        direction: DESC

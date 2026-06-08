@@ -1,0 +1,48 @@
+filters:
+  and:
+    - file.inFolder("05-Resources/Books")
+    - file.name != "Books"
+formulas:
+  status_label: if(status == "reading", "Currently reading", if(status == "done", "Finished", "Want to read"))
+  year_read: if(date_finished, date(date_finished).year, "")
+properties:
+  note.author:
+    displayName: Author
+  note.status:
+    displayName: Status
+  note.date_finished:
+    displayName: Finished
+  formula.year_read:
+    displayName: Year
+  formula.status_label:
+    displayName: Label
+views:
+  - type: cards
+    name: Currently reading
+    filters:
+      and:
+        - status == "reading"
+    order:
+      - file.name
+      - author
+  - type: table
+    name: Want to read
+    filters:
+      and:
+        - status == "to-read"
+    order:
+      - file.name
+      - author
+  - type: table
+    name: Finished
+    filters:
+      and:
+        - status == "done"
+    order:
+      - file.name
+      - author
+      - formula.year_read
+      - date_finished
+    sort:
+      - property: date_finished
+        direction: DESC

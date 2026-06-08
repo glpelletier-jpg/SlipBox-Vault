@@ -1,0 +1,69 @@
+filters:
+  and:
+    - file.inFolder("05-Resources/Articles")
+    - file.name != "Articles"
+formulas:
+  year_saved: if(date_saved, date(date_saved).year, "")
+  status_label: if(status == "reading", "Reading", if(status == "done", "Done", "To read"))
+properties:
+  note.author:
+    displayName: Author
+  note.source:
+    displayName: Source
+  note.status:
+    displayName: Status
+  note.date_saved:
+    displayName: Saved
+  note.date_read:
+    displayName: Read
+  formula.year_saved:
+    displayName: Year
+  formula.status_label:
+    displayName: Label
+views:
+  - type: table
+    name: To read
+    filters:
+      and:
+        - status == "to-read"
+    order:
+      - file.name
+      - author
+      - source
+      - date_saved
+    sort:
+      - property: date_saved
+        direction: DESC
+  - type: table
+    name: Reading
+    filters:
+      and:
+        - status == "reading"
+    order:
+      - file.name
+      - author
+      - source
+  - type: table
+    name: Done
+    filters:
+      and:
+        - status == "done"
+    order:
+      - file.name
+      - author
+      - source
+      - date_read
+    sort:
+      - property: date_read
+        direction: DESC
+  - type: table
+    name: All articles
+    order:
+      - file.name
+      - author
+      - source
+      - formula.status_label
+      - date_saved
+    sort:
+      - property: date_saved
+        direction: DESC

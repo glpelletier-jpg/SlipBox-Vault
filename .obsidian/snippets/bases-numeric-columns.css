@@ -1,0 +1,118 @@
+/* ============================================================
+   bases-numeric-columns.css  —  Slip Box vault
+   Centers numeric and short-value columns in Obsidian Bases.
+
+   Confirmed DOM structure from DevTools inspection:
+
+   Raw note fields (note.focus_minutes etc.):
+     div.bases-td[data-property="note.focus_minutes"]
+       div.bases-table-cell.bases-metadata-value[data-property-type="number"]
+         input.metadata-input.metadata-input-number
+
+   Formula fields (formula.duration_display etc.):
+     div.bases-td[data-property="formula.duration_display"]
+       div.bases-table-cell.bases-rendered-value[data-property-type="text"]
+         (text content directly)
+
+   Header cells:
+     div.bases-td.mod-formula[data-property="formula.x"]
+       div.bases-table-header
+         div.bases-table-header-label
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   RAW NOTE NUMBER FIELDS
+   Target the input inside bases-metadata-value
+   ---------------------------------------------------------- */
+
+.bases-td[data-property-type="number"] .metadata-input-number,
+.bases-table-cell[data-property-type="number"] .metadata-input-number {
+    text-align: center !important;
+}
+
+/* Also center via the outer bases-td using :has() */
+.bases-td:has(.bases-metadata-value[data-property-type="number"]) {
+    justify-content: center !important;
+}
+
+.bases-td:has(.bases-metadata-value[data-property-type="number"])
+.bases-metadata-value {
+    justify-content: center !important;
+    display: flex !important;
+}
+
+
+/* ----------------------------------------------------------
+   FORMULA COLUMNS — numeric/short display values
+   Target div.bases-rendered-value directly via parent data-property
+   ---------------------------------------------------------- */
+
+.bases-td[data-property="formula.bp_display"] .bases-rendered-value,
+.bases-td[data-property="formula.steps_pct"] .bases-rendered-value,
+.bases-td[data-property="formula.weight_display"] .bases-rendered-value,
+.bases-td[data-property="formula.energy_display"] .bases-rendered-value,
+.bases-td[data-property="formula.sleep_display"] .bases-rendered-value,
+.bases-td[data-property="formula.weight_trend"] .bases-rendered-value,
+.bases-td[data-property="formula.bp_status"] .bases-rendered-value,
+.bases-td[data-property="formula.pulse_status"] .bases-rendered-value,
+.bases-td[data-property="formula.glucose_status"] .bases-rendered-value,
+.bases-td[data-property="formula.steps_status"] .bases-rendered-value,
+.bases-td[data-property="formula.energy_status"] .bases-rendered-value,
+.bases-td[data-property="formula.sleep_status"] .bases-rendered-value,
+.bases-td[data-property="formula.duration_display"] .bases-rendered-value,
+.bases-td[data-property="formula.alignment"] .bases-rendered-value,
+.bases-td[data-property="formula.min_vs_goal"] .bases-rendered-value,
+.bases-td[data-property="formula.trend_focus"] .bases-rendered-value,
+.bases-td[data-property="formula.quest_pct"] .bases-rendered-value,
+.bases-td[data-property="formula.days_left"] .bases-rendered-value,
+.bases-td[data-property="formula.on_track"] .bases-rendered-value,
+.bases-td[data-property="formula.days_old"] .bases-rendered-value {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+
+/* ----------------------------------------------------------
+   COLUMN HEADERS — center label text for numeric columns
+   ---------------------------------------------------------- */
+
+.bases-td.mod-formula[data-property="formula.bp_display"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.steps_pct"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.weight_display"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.energy_display"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.sleep_display"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.weight_trend"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.bp_status"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.pulse_status"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.glucose_status"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.steps_status"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.energy_status"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.sleep_status"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.duration_display"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.alignment"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.min_vs_goal"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.trend_focus"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.quest_pct"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.days_left"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.on_track"] .bases-table-header-label,
+.bases-td.mod-formula[data-property="formula.days_old"] .bases-table-header-label {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* Headers for raw note number fields */
+.bases-td.mod-formula:has(~ .bases-td .bases-metadata-value[data-property-type="number"]) .bases-table-header-label {
+    text-align: center !important;
+}
+
+
+/* ----------------------------------------------------------
+   SUMMARY ROW — center all value cells after the label
+   ---------------------------------------------------------- */
+
+.bases-summary-row .bases-td:not(:first-child) .bases-rendered-value,
+.bases-summary-row .bases-td:not(:first-child) .bases-metadata-value {
+    text-align: center !important;
+    justify-content: center !important;
+}

@@ -1,0 +1,212 @@
+summaries:
+  note.bp_systolic: values.mean().round(0)
+  note.bp_diastolic: values.mean().round(0)
+  note.pulse: values.mean().round(0)
+  note.glucose: values.mean().round(1)
+  note.steps: values.mean().round(0)
+  note.weight: values.mean().round(1)
+  note.energy: values.mean().round(1)
+  note.energy_score: values.mean().round(0)
+  note.sleep_hours: values.mean().round(1)
+filters:
+  and:
+    - file.inFolder("04-Daily-Notes")
+    - file.name != "04-Daily-Notes"
+    - "!pulse.isEmpty()"
+formulas:
+  date_label: if(date, date(date).format("ddd MMM D"), "")
+  bp_display: if(bp_systolic > 0 && bp_diastolic > 0, bp_systolic + "/" + bp_diastolic, "")
+  bp_status: if(bp_systolic >= 140 || bp_diastolic >= 90, "🔴 High", if(bp_systolic >= 130 || bp_diastolic >= 80, "🟡 Elevated", if(bp_systolic > 0 && bp_diastolic > 0, "🟢 Normal", "")))
+  pulse_status: if(pulse > 100, "🔴 High", if(pulse > 0 && pulse < 60, "🟡 Low", if(pulse > 0, "🟢 Normal", "")))
+  glucose_status: if(glucose >= 126, "🔴 Diabetic range", if(glucose >= 100, "🟡 Prediabetes range", if(glucose > 0, "🟢 Normal", "")))
+  steps_pct: if(steps > 0, (steps / 10000 * 100).round(0) + "%", "")
+  steps_status: if(steps >= 10000, "🟢 Goal met", if(steps >= 7500, "🟡 Nearly there", if(steps > 0, "🔴 Below goal", "")))
+  weight_display: if(weight > 0, weight + " lbs", "")
+  weight_trend: if(weight > 0, "⚖️", "")
+  energy_display: if(energy > 0, energy + "/5", "")
+  energy_status: if(energy >= 4, "🟢 High", if(energy >= 3, "🟡 Ok", if(energy > 0, "🔴 Low", "")))
+  energy_score_display: if(energy_score > 0, energy_score + "/100", "")
+  energy_score_status: if(energy_score >= 70, "🟢 Ready", if(energy_score >= 40, "🟡 Moderate", if(energy_score > 0, "🔴 Low", "")))
+  sleep_display: if(sleep_hours > 0, sleep_hours + "h", "")
+  sleep_status: if(sleep_hours >= 7, "🟢 Good", if(sleep_hours >= 6, "🟡 Short", if(sleep_hours > 0, "🔴 Poor", "")))
+properties:
+  formula.date_label:
+    displayName: Date
+  formula.bp_display:
+    displayName: BP (mmHg)
+  formula.bp_status:
+    displayName: BP Status
+  note.pulse:
+    displayName: Pulse (BPM)
+  formula.pulse_status:
+    displayName: Pulse Status
+  note.glucose:
+    displayName: Glucose (mg/dL)
+  formula.glucose_status:
+    displayName: Glucose Status
+  note.glucose_context:
+    displayName: Context
+  note.steps:
+    displayName: Steps
+  formula.steps_pct:
+    displayName: Steps %
+  formula.steps_status:
+    displayName: Steps Status
+  note.bp_systolic:
+    displayName: Systolic
+  note.bp_diastolic:
+    displayName: Diastolic
+  note.weight:
+    displayName: Weight (lbs)
+  formula.weight_display:
+    displayName: Weight
+  formula.energy_display:
+    displayName: Energy
+  formula.energy_status:
+    displayName: Energy Status
+  formula.energy_score_display:
+    displayName: Energy Score
+  formula.energy_score_status:
+    displayName: Score Status
+  note.sleep_hours:
+    displayName: Sleep (hrs)
+  formula.sleep_display:
+    displayName: Sleep
+  formula.sleep_status:
+    displayName: Sleep Status
+views:
+  - type: table
+    name: Daily log (last 30 days)
+    order:
+      - formula.date_label
+      - formula.bp_display
+      - formula.bp_status
+      - pulse
+      - formula.pulse_status
+      - glucose
+      - formula.glucose_status
+      - glucose_context
+      - steps
+      - formula.steps_status
+      - formula.weight_display
+      - formula.sleep_display
+      - formula.sleep_status
+      - formula.energy_display
+      - formula.energy_status
+    sort:
+      - property: date
+        direction: DESC
+    limit: 30
+  - type: table
+    name: Last 7 days
+    order:
+      - formula.date_label
+      - formula.bp_display
+      - formula.bp_status
+      - pulse
+      - formula.pulse_status
+      - glucose
+      - formula.glucose_status
+      - glucose_context
+      - steps
+      - formula.steps_pct
+      - formula.weight_display
+      - formula.sleep_display
+      - formula.sleep_status
+      - formula.energy_display
+      - formula.energy_status
+    sort:
+      - property: date
+        direction: ASC
+    limit: 7
+  - type: table
+    name: Last 30 days
+    order:
+      - formula.date_label
+      - formula.bp_display
+      - formula.bp_status
+      - pulse
+      - formula.pulse_status
+      - glucose
+      - formula.glucose_status
+      - glucose_context
+      - steps
+      - formula.steps_pct
+      - formula.weight_display
+      - formula.sleep_display
+      - formula.sleep_status
+      - formula.energy_display
+      - formula.energy_status
+    sort:
+      - property: date
+        direction: ASC
+    limit: 30
+  - type: table
+    name: Last 90 days
+    order:
+      - formula.date_label
+      - formula.bp_display
+      - formula.bp_status
+      - pulse
+      - formula.pulse_status
+      - glucose
+      - formula.glucose_status
+      - glucose_context
+      - steps
+      - formula.steps_pct
+      - formula.weight_display
+      - formula.sleep_display
+      - formula.sleep_status
+      - formula.energy_display
+      - formula.energy_status
+    sort:
+      - property: date
+        direction: ASC
+    limit: 90
+  - type: table
+    name: Weight log
+    filters:
+      and:
+        - weight > 0
+    order:
+      - formula.date_label
+      - weight
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Sleep & Energy
+    filters:
+      and:
+        - sleep_hours > 0
+    order:
+      - formula.date_label
+      - formula.sleep_display
+      - formula.sleep_status
+      - formula.energy_display
+      - formula.energy_status
+      - formula.energy_score_display
+      - formula.energy_score_status
+      - glucose
+      - glucose_context
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: All time
+    order:
+      - formula.date_label
+      - formula.bp_display
+      - pulse
+      - glucose
+      - glucose_context
+      - steps
+      - formula.weight_display
+      - formula.sleep_display
+      - formula.energy_display
+    sort:
+      - property: date
+        direction: DESC
+    summaries:
+      steps: Average
+      formula.weight_display: new summary

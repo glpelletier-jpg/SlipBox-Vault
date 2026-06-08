@@ -1,0 +1,29 @@
+filters:
+  and:
+    - file.inFolder("_attachments/Work/Troubleshooting")
+    - note.type == "attachment"
+properties:
+  note.title:
+    displayName: Title
+  note.vendor:
+    displayName: Vendor / Source
+  note.description:
+    displayName: Description
+  note.added:
+    displayName: Date Added
+  note.source:
+    displayName: Origin
+  note.linked_note:
+    displayName: Linked Note
+  note.status:
+    displayName: Status
+views:
+  - type: table
+    name: Troubleshooting Records
+    order:
+      - note.title
+      - note.description
+      - note.added
+      - note.linked_note
+  - type: cards
+    name: Cards

@@ -1,0 +1,61 @@
+filters:
+  and:
+    - file.inFolder("02-Quests")
+    - status != "Abandoned"
+formulas:
+  days_left: if(due, (date(due) - today()).days, "")
+  on_track: if(progress >= 50 && days_left > 30, "On track", if(progress < 30 && days_left < 45, "At risk", "Check in"))
+  current_quarter: date(now()).format("YYYY-[Q]Q")
+  is_current_quarter: quarter == date(now()).format("YYYY-[Q]Q")
+properties:
+  note.area:
+    displayName: Area
+  note.quarter:
+    displayName: Quarter
+  note.progress:
+    displayName: Progress (%)
+  note.status:
+    displayName: Status
+  note.due:
+    displayName: Due
+  formula.days_left:
+    displayName: Days left
+  formula.on_track:
+    displayName: Health
+views:
+  - type: table
+    name: Active quests
+    filters:
+      and:
+        - status == "Active"
+    order:
+      - file.name
+      - area
+      - progress
+      - formula.days_left
+      - formula.on_track
+    sort:
+      - property: progress
+        direction: DESC
+  - type: cards
+    name: This quarter
+    filters:
+      and:
+        - status == "Active"
+        - quarter == date(now()).format("YYYY-[Q]Q")
+    order:
+      - file.name
+      - area
+      - status
+      - progress
+  - type: table
+    name: All quests
+    order:
+      - file.name
+      - area
+      - quarter
+      - status
+      - progress
+    sort:
+      - property: quarter
+        direction: DESC

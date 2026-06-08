@@ -1,0 +1,20 @@
+{
+  "globalFilter": "",
+  "removeGlobalFilter": false,
+  "setDoneDate": true,
+  "autoSuggestInEditor": true,
+  "autoSuggestMinMatch": 0,
+  "autoSuggestMaxItems": 20,
+  "provideAccessKeys": true,
+  "useFilenameAsScheduledDate": false,
+  "filenameAsDateFolders": [],
+  "recurrenceOnNextLine": false,
+  "legacyReferenceDate": false,
+  "taskStatuses": [],
+  "customStatuses": [],
+  "excludedFolders": [
+    "00-Home",
+    "_templates"
+  ],
+  "maxTasksLoaded": 1000
+}

@@ -1,0 +1,115 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "homepage:open-homepage",
+      "icon": "lucide-house",
+      "name": "Open Home",
+      "mode": "any"
+    },
+    {
+      "id": "periodic-notes:open-daily-note",
+      "icon": "lucide-calendar-days",
+      "name": "Open today's daily note (Periodic Notes)",
+      "mode": "any"
+    },
+    {
+      "id": "periodic-notes:open-weekly-note",
+      "icon": "lucide-calendar-range",
+      "name": "Open weekly note",
+      "mode": "any"
+    },
+    {
+      "id": "global-search:open",
+      "icon": "lucide-search",
+      "name": "Open search",
+      "mode": "any"
+    },
+    {
+      "id": "switcher:open",
+      "icon": "lucide-navigation",
+      "name": "Open quick switcher",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:f8f1ed6e-c47e-45c8-a9a3-21586683afc8",
+      "icon": "lucide-database-backup",
+      "name": "Full Backup",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "app:go-back",
+      "icon": "lucide-arrow-left",
+      "name": "Navigate back",
+      "mode": "any"
+    },
+    {
+      "id": "app:go-forward",
+      "icon": "lucide-arrow-right",
+      "name": "Navigate forward",
+      "mode": "any"
+    },
+    {
+      "id": "homepage:open-homepage",
+      "icon": "lucide-home",
+      "name": "Open home",
+      "mode": "any"
+    },
+    {
+      "id": "periodic-notes:open-daily-note",
+      "icon": "lucide-calendar-days",
+      "name": "Open today's daily note (Periodic Notes)",
+      "mode": "any"
+    },
+    {
+      "id": "graph:open",
+      "icon": "lucide-git-fork",
+      "name": "Graph View",
+      "mode": "any"
+    },
+    {
+      "id": "command-palette:open",
+      "icon": "lucide-terminal-square",
+      "name": "Open command palette",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": [
+      "Open graph view",
+      "Create new canvas",
+      "Open command palette",
+      "Create new base",
+      "Templater",
+      "Notebook Navigator",
+      "QuickAdd",
+      "Sync reMarkable",
+      "Manage workspace layouts",
+      "Open today",
+      "Open homepage"
+    ]
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

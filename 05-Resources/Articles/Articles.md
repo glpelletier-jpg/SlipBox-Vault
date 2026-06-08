@@ -1,0 +1,3 @@
+# Articles
+
+![[articles.base]]

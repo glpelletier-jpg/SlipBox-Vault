@@ -1,0 +1,101 @@
+summaries:
+  note.focus_minutes: values.sum()
+filters:
+  and:
+    - file.inFolder("04-Daily-Notes")
+    - file.name != "04-Daily-Notes"
+formulas:
+  date_label: if(date, date(date).format("ddd MMM D"), "")
+  week_num: if(date, date(date).format("gggg-[W]ww"), "")
+  month_label: if(date, date(date).format("MMM YYYY"), "")
+  intention_display: if(focus_intention != null && focus_intention != "", focus_intention, "—")
+  reflection_display: if(end_of_day != null && end_of_day != "", end_of_day, "—")
+  alignment: if(focus_intention != null && focus_intention != "" && end_of_day != null && end_of_day != "", "✅ Both", if(focus_intention != null && focus_intention != "", "🌅 Morning only", if(end_of_day != null && end_of_day != "", "🌙 Evening only", "—")))
+  duration_display: if(focus_minutes > 0, ((focus_minutes - focus_minutes % 60) / 60) + "h " + (focus_minutes % 60) + "m", "—")
+  energy_display: if(energy > 0, energy + "/5", "—")
+properties:
+  formula.date_label:
+    displayName: Date
+  formula.week_num:
+    displayName: Week
+  formula.month_label:
+    displayName: Month
+  formula.intention_display:
+    displayName: Morning intention
+  formula.reflection_display:
+    displayName: End-of-day reflection
+  formula.alignment:
+    displayName: Logged
+  formula.duration_display:
+    displayName: Focus time
+  formula.energy_display:
+    displayName: Energy
+views:
+  - type: table
+    name: Last 7 days
+    order:
+      - formula.date_label
+      - formula.intention_display
+      - formula.reflection_display
+      - formula.alignment
+      - formula.duration_display
+      - formula.energy_display
+    sort:
+      - property: date
+        direction: DESC
+    limit: 7
+  - type: table
+    name: Last 30 days
+    order:
+      - formula.date_label
+      - formula.week_num
+      - formula.intention_display
+      - formula.reflection_display
+      - formula.alignment
+      - formula.energy_display
+    sort:
+      - property: date
+        direction: DESC
+    limit: 30
+  - type: table
+    name: Last 90 days
+    order:
+      - formula.date_label
+      - formula.week_num
+      - formula.month_label
+      - formula.intention_display
+      - formula.reflection_display
+      - formula.alignment
+      - formula.energy_display
+    sort:
+      - property: date
+        direction: DESC
+    limit: 90
+  - type: table
+    name: Intentions only
+    filters:
+      and:
+        - focus_intention != null
+        - focus_intention != ""
+    order:
+      - formula.date_label
+      - formula.intention_display
+      - formula.reflection_display
+      - formula.alignment
+      - formula.duration_display
+      - formula.energy_display
+    sort:
+      - property: date
+        direction: DESC
+    limit: 30
+  - type: table
+    name: All time
+    order:
+      - formula.date_label
+      - formula.intention_display
+      - formula.reflection_display
+      - formula.alignment
+      - formula.energy_display
+    sort:
+      - property: date
+        direction: DESC

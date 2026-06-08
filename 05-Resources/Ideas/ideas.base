@@ -1,0 +1,81 @@
+filters:
+  and:
+    - file.inFolder("05-Resources/Ideas")
+    - file.name != "Ideas"
+formulas:
+  age_days: if(date, (today() - date(date)).days, "")
+  status_label: if(status == "promoted", "Promoted", if(status == "developing", "Developing", if(status == "parked", "Parked", "Raw")))
+properties:
+  note.area:
+    displayName: Area
+  note.status:
+    displayName: Status
+  note.date:
+    displayName: Captured
+  formula.age_days:
+    displayName: Age (days)
+  formula.status_label:
+    displayName: Label
+views:
+  - type: table
+    name: Active ideas
+    filters:
+      and:
+        - status != "parked"
+        - status != "promoted"
+    order:
+      - file.name
+      - area
+      - formula.status_label
+      - date
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Developing
+    filters:
+      and:
+        - status == "developing"
+    order:
+      - file.name
+      - area
+      - date
+      - formula.age_days
+    sort:
+      - property: date
+        direction: ASC
+  - type: table
+    name: Parked
+    filters:
+      and:
+        - status == "parked"
+    order:
+      - file.name
+      - area
+      - date
+      - formula.age_days
+    sort:
+      - property: date
+        direction: ASC
+  - type: table
+    name: Promoted
+    filters:
+      and:
+        - status == "promoted"
+    order:
+      - file.name
+      - area
+      - date
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: All ideas
+    order:
+      - file.name
+      - area
+      - formula.status_label
+      - date
+    sort:
+      - property: date
+        direction: DESC

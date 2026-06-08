@@ -1,0 +1,71 @@
+filters:
+  and:
+    - file.inFolder("_attachments")
+    - note.type == "attachment"
+properties:
+  note.title:
+    displayName: Title
+  note.category:
+    displayName: Category
+  note.vendor:
+    displayName: Vendor
+  note.description:
+    displayName: Description
+  note.added:
+    displayName: Added
+  note.status:
+    displayName: Status
+  note.linked_note:
+    displayName: Linked Note
+views:
+  - type: table
+    name: All Attachments
+    order:
+      - category
+      - title
+      - vendor
+      - description
+      - added
+    columnSize:
+      note.title: 566
+  - type: table
+    name: Work
+    filters:
+      and:
+        - note.category.startsWith("work")
+    order:
+      - category
+      - title
+      - vendor
+      - description
+      - added
+  - type: table
+    name: Courses
+    filters:
+      and:
+        - note.category == "courses"
+    order:
+      - title
+      - description
+      - added
+  - type: table
+    name: Books
+    filters:
+      and:
+        - note.category == "books"
+    order:
+      - title
+      - vendor
+      - added
+  - type: table
+    name: Personal
+    filters:
+      and:
+        - note.category == "personal"
+    order:
+      - title
+      - description
+      - added
+  - type: cards
+    name: Cards
+    imageProperty: cover

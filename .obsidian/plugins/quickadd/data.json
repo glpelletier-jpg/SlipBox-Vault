@@ -1,0 +1,469 @@
+{
+  "choices": [
+    {
+      "id": "8fbc1e3c-bba3-46d7-a4b2-63c354fa1454",
+      "name": "New Fleeting Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "_templates/Fleeting Note Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYYMMDDHHmmss}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "06-Zettelkasten/Fleeting"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "default",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "id": "13aab76c-a88d-406a-9114-70aa41ad812c",
+      "name": "New Permanent Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "_templates/Permanent Note Template.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "06-Zettelkasten/Permanent"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "default",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "id": "73fd090a-a813-4765-a89d-5765fd9eb671",
+      "name": "Add to Daily Capture",
+      "type": "Capture",
+      "command": true,
+      "templatePath": "",
+      "format": {
+        "enabled": false,
+        "format": ""
+      },
+      "fileName": "{{DATE:YYYY-MM-DD}}",
+      "filePath": {
+        "enabled": true,
+        "folder": "04-Daily-Notes"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "## Capture inbox",
+        "insertAtEnd": false,
+        "considerSubsections": false
+      },
+      "appendLink": false,
+      "task": false,
+      "captureToActiveFile": false,
+      "openFile": false,
+      "enabled": true
+    },
+    {
+      "id": "1838ef3d-10c4-4c07-8d45-0cd2411a3411",
+      "name": "Weekly Calendar",
+      "type": "Macro",
+      "command": true,
+      "macroId": "db897edb-88fd-4845-ba69-738ed5684250",
+      "enabled": true,
+      "macro": {
+        "id": "db897edb-88fd-4845-ba69-738ed5684250",
+        "name": "Weekly Calendar",
+        "commands": [
+          {
+            "name": "weekly-calendar",
+            "type": "UserScript",
+            "id": "d047e0a1-0d82-4c81-9723-f7008f808817",
+            "path": "_scripts/weekly-calendar.js",
+            "settings": {
+              "ics_url": "https://calendar.google.com/calendar/ical/glpelletier%40gmail.com/private-58c3659fdc066993e340b70db552c329/basic.ics",
+              "todoist_ics_url": "https://ext.todoist.com/export/ical/todoist?user_id=57068889&ical_token=1836d62d807d2f31afa5bd60b89e633f904750b92776ede1f54cf45254fbb385&r_factor=1025"
+            }
+          }
+        ]
+      },
+      "runOnStartup": true
+    },
+    {
+      "id": "35b1ab86-bddf-46a1-a583-094c3af0ad6c",
+      "name": "Next Week Calendar",
+      "type": "Macro",
+      "command": true,
+      "macroId": "247da3a1-577c-4e2b-aef4-980aa9554d85",
+      "enabled": true,
+      "macro": {
+        "id": "247da3a1-577c-4e2b-aef4-980aa9554d85",
+        "name": "Next Week Calendar",
+        "commands": [
+          {
+            "id": "cc532197-e700-47de-b352-de2aee30cc9c",
+            "type": "UserScript",
+            "name": "next-week-calendar",
+            "path": "_scripts/next-week-calendar.js",
+            "settings": {
+              "ics_url": "https://calendar.google.com/calendar/ical/glpelletier%40gmail.com/private-58c3659fdc066993e340b70db552c329/basic.ics",
+              "todoist_ics_url": "https://ext.todoist.com/export/ical/todoist?user_id=57068889&ical_token=1836d62d807d2f31afa5bd60b89e633f904750b92776ede1f54cf45254fbb385&r_factor=1025"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "6a34ec86-7258-422d-95a1-322854a1f19c",
+      "name": "New Troubleshooting Log",
+      "type": "Template",
+      "command": true,
+      "templatePath": "_templates/Troubleshooting Log Template.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "07-Work-Knowledge/Troubleshooting"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "default",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "id": "a4f7c2e1-8b3d-4f9a-b621-7e5d0c3a1f84",
+      "name": "New Quarterly Plan",
+      "type": "Template",
+      "command": true,
+      "settings": {
+        "template": "_templates/Quarterly Planning Template.md",
+        "folder": "03-Reviews/Quarterly",
+        "fileName": "{{DATE:YYYY-[Q]Q}}-plan",
+        "createInSameFolder": false,
+        "fileNameFormat": {
+          "enabled": true,
+          "format": "{{DATE:YYYY-[Q]Q}}-plan"
+        },
+        "appendLink": false,
+        "openFile": true,
+        "openFileInNewTab": {
+          "enabled": false,
+          "direction": "vertical",
+          "focus": true
+        },
+        "setFileExistsBehavior": false,
+        "fileExistsMode": "Increment the file name",
+        "runCommandAfterCreation": false
+      }
+    },
+    {
+      "id": "b2e9d4f7-3c1a-4e8b-a705-9f6c2d0b4e31",
+      "name": "New Course Package",
+      "type": "Template",
+      "command": true,
+      "settings": {
+        "template": "_templates/New Course Package.md",
+        "folder": "05-Resources/Courses",
+        "fileName": "Course-Setup-Temp",
+        "createInSameFolder": false,
+        "fileNameFormat": {
+          "enabled": false,
+          "format": ""
+        },
+        "appendLink": false,
+        "openFile": false,
+        "openFileInNewTab": {
+          "enabled": false,
+          "direction": "vertical",
+          "focus": true
+        },
+        "setFileExistsBehavior": false,
+        "fileExistsMode": "Increment the file name",
+        "runCommandAfterCreation": false
+      }
+    },
+    {
+      "name": "Vault Backup",
+      "id": "c7f3a2e1-5d8b-4c9a-b041-3e6f1d0a7c84",
+      "type": "Macro",
+      "command": true,
+      "macroId": "d4e8b1f2-9c3a-4d7e-b562-1f4a0e8c2d95",
+      "enabled": true,
+      "macro": {
+        "id": "d4e8b1f2-9c3a-4d7e-b562-1f4a0e8c2d95",
+        "name": "Vault Backup",
+        "commands": [
+          {
+            "id": "e5f9c2a3-0d4b-4e8f-c673-2a5b1f9d3e06",
+            "type": "UserScript",
+            "name": "vault_backup_qa",
+            "path": "_scripts/vault_backup_qa.js"
+          }
+        ]
+      }
+    },
+    {
+      "id": "0c08f50f-d177-4ed5-b418-e89f449ed9cf",
+      "name": "Triage Fleeting Note",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "name": "Triage Fleeting Note",
+        "id": "f5c26687-cbfd-4d21-a2a9-de3d0821b76f",
+        "commands": [
+          {
+            "name": "fleeting-triage",
+            "type": "UserScript",
+            "id": "91f26974-65c7-453a-b835-f225d40d68d0",
+            "path": "_scripts/fleeting-triage.js",
+            "settings": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "320da96b-10f6-429a-a884-eb8423a9a8cc",
+      "name": "Update Focus Minutes",
+      "type": "Template",
+      "command": true,
+      "templatePath": "_templates/Update Focus Minutes.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": false,
+        "folders": [],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "default",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "id": "f8f1ed6e-c47e-45c8-a9a3-21586683afc8",
+      "name": "Full backup",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "name": "Full backup",
+        "id": "470ce73b-b6da-472f-9717-e9597edc0273",
+        "commands": [
+          {
+            "name": "vault-full-backup-qa",
+            "type": "UserScript",
+            "id": "ab99ae94-9b93-48d2-9781-370b12018779",
+            "path": "_scripts/vault-full-backup-qa.js",
+            "settings": {}
+          }
+        ]
+      }
+    }
+  ],
+  "inputPrompt": "single-line",
+  "persistInputPromptDrafts": true,
+  "useSelectionAsCaptureValue": true,
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": "major",
+  "version": "2.12.3",
+  "globalVariables": {},
+  "onePageInputEnabled": false,
+  "disableOnlineFeatures": true,
+  "enableRibbonIcon": true,
+  "showCaptureNotification": true,
+  "showInputCancellationNotification": false,
+  "enableTemplatePropertyTypes": false,
+  "dateAliases": {
+    "t": "today",
+    "tm": "tomorrow",
+    "yd": "yesterday",
+    "nw": "next week",
+    "nm": "next month",
+    "ny": "next year",
+    "lw": "last week",
+    "lm": "last month",
+    "ly": "last year"
+  },
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\\text{new}}:=w_{ij}^{\\text{current}}+\\eta\\cdot\\delta_j\\cdot x_{ij}$$ on a separate line, but you can write \"($\\eta$ = learning rate, $\\delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4-turbo",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o-mini",
+            "maxTokens": 128000
+          }
+        ],
+        "autoSyncModels": false,
+        "modelSource": "modelsDev"
+      },
+      {
+        "name": "Gemini",
+        "endpoint": "https://generativelanguage.googleapis.com",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gemini-1.5-pro",
+            "maxTokens": 1000000
+          },
+          {
+            "name": "gemini-1.5-flash",
+            "maxTokens": 1000000
+          },
+          {
+            "name": "gemini-1.5-flash-8b",
+            "maxTokens": 1000000
+          }
+        ],
+        "autoSyncModels": false,
+        "modelSource": "modelsDev"
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "consolidateFileExistsBehavior": true,
+    "repairTemplateFileExistsBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true,
+    "removeMacroIndirection": true,
+    "migrateFileOpeningSettings": true,
+    "backfillFileOpeningDefaults": true,
+    "setProviderModelDiscoveryMode": true,
+    "migrateProviderApiKeysToSecretStorage": true
+  },
+  "macros": [
+    {
+      "id": "db897edb-88fd-4845-ba69-738ed5684250",
+      "name": "Weekly Calendar",
+      "commands": [
+        {
+          "id": "6a68e297-c7d4-4fe0-9714-41014564d8ed",
+          "type": "UserScript",
+          "name": "weekly-calendar",
+          "path": "_scripts/weekly-calendar.js"
+        }
+      ]
+    },
+    {
+      "id": "247da3a1-577c-4e2b-aef4-980aa9554d85",
+      "name": "Next Week Calendar",
+      "commands": [
+        {
+          "id": "cc532197-e700-47de-b352-de2aee30cc9c",
+          "type": "UserScript",
+          "name": "next-week-calendar",
+          "path": "_scripts/next-week-calendar.js",
+          "settings": {
+            "ics_url": "https://calendar.google.com/calendar/ical/glpelletier%40gmail.com/private-58c3659fdc066993e340b70db552c329/basic.ics"
+          }
+        }
+      ]
+    },
+    {
+      "id": "d4e8b1f2-9c3a-4d7e-b562-1f4a0e8c2d95",
+      "name": "Vault Backup",
+      "commands": [
+        {
+          "id": "e5f9c2a3-0d4b-4e8f-c673-2a5b1f9d3e06",
+          "type": "UserScript",
+          "name": "vault_backup_qa",
+          "path": "_scripts/vault_backup_qa.js"
+        }
+      ]
+    }
+  ]
+}

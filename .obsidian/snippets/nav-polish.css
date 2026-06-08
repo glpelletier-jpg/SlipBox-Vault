@@ -1,0 +1,20 @@
+﻿/* Slip Box - Navigation Polish */
+
+/* Slim the left ribbon */
+.workspace-ribbon.side-dock-ribbon.mod-left { width: 36px; }
+.workspace-ribbon.side-dock-ribbon.mod-left .side-dock-ribbon-action { width: 36px; height: 36px; padding: 6px; }
+
+/* Hide default vault/help ribbon icons */
+.workspace-ribbon.side-dock-ribbon.mod-left .side-dock-ribbon-action[aria-label='Open another vault'],
+.workspace-ribbon.side-dock-ribbon.mod-left .side-dock-ribbon-action[aria-label='Help'] { display: none; }
+
+/* File tree: tighter spacing and folder nesting lines */
+.nav-folder-title { font-weight: 600; padding-top: 2px; padding-bottom: 2px; }
+.nav-file-title { padding-top: 1px; padding-bottom: 1px; font-size: 0.9em; }
+.nav-folder-children { border-left: 1px solid var(--background-modifier-border); margin-left: 10px; }
+
+/* Active note highlight in file tree */
+.nav-file-title.is-active { font-weight: 600; background: var(--interactive-accent-hover); border-radius: 4px; }
+
+/* Compact tab headers */
+.mod-root .workspace-tab-header { min-width: 80px; max-width: 180px; }

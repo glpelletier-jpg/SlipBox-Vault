@@ -1,0 +1,50 @@
+summaries:
+  note.focus_minutes: values.sum()
+filters:
+  and:
+    - file.inFolder("04-Daily-Notes")
+    - focus_minutes > 0
+formulas:
+  day_name: if(date, date(date).format("ddd MMM D"), "")
+  week_num: if(date, date(date).format("YYYY-[W]WW"), "")
+  duration_display: if(focus_minutes > 0, ((focus_minutes - focus_minutes % 60) / 60) + "h " + (focus_minutes % 60) + "m", "")
+  weekly_total: if(focus_minutes > 0, focus_minutes, 0)
+  Untitled: ""
+properties:
+  formula.day_name:
+    displayName: Day
+  note.focus_minutes:
+    displayName: Focus (min)
+  formula.duration_display:
+    displayName: Duration
+  formula.week_num:
+    displayName: Week
+views:
+  - type: table
+    name: Focus log (last 14 days)
+    order:
+      - formula.day_name
+      - formula.duration_display
+      - focus_minutes
+      - formula.week_num
+      - formula.Untitled
+    sort:
+      - property: formula.day_name
+        direction: DESC
+      - property: focus_minutes
+        direction: ASC
+      - property: date
+        direction: DESC
+    limit: 14
+    summaries:
+      focus_minutes: Average
+  - type: table
+    name: Last 7 days
+    order:
+      - formula.day_name
+      - formula.duration_display
+      - focus_minutes
+    sort:
+      - property: date
+        direction: ASC
+    limit: 7
