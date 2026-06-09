@@ -1,5 +1,5 @@
 ---
-cover: "[[attachments/my-banner.jpg]]"
+cover:
 ---
 
 

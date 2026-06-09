@@ -16,8 +16,8 @@ Every measurement chain has three failure modes worth designing against: **senso
 
 ## Core concepts
 - [[PN — 4–20 mA loops provide live-zero detection — a 0 mA signal indicates a wire break, not zero process value]]
-- [[PN — HART superimposes 1200/2200 Hz FSK digital signal on the 4–20 mA loop without disrupting analog output]]
-- [[PN — IO-Link is a point-to-point digital protocol replacing discrete and analog signals with parameterizable smart I/O]]
+- [[PN — HART superimposes 1200-2200 Hz FSK digital signal on the 4–20 mA loop without disrupting analog output]]
+- [[PN — IO-Link is a point-to-point digital protocol replacing discrete and analog signals with parameterizable smart I-O]]
 - [[PN — Endress+Hauser Heartbeat Technology provides continuous self-monitoring and on-demand verification without process interruption]]
 - [[PN — Pepperl+Fuchs isolators galvanically decouple field devices from control system to prevent ground loops]]
 - [[PN — SICK safety light curtains require annual proof testing and defined minimum object detection size per ISO 13855]]

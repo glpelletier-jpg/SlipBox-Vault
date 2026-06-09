@@ -16,7 +16,7 @@ The **Purdue Reference Model** (ISA-95 hierarchy) structures OT networks into le
 
 ## Core concepts
 - [[PN — Purdue model zones define trust boundaries — cross-zone traffic requires explicit firewall rules]]
-- [[PN — EtherNet/IP uses CIP over standard TCP/UDP — implicit messaging for I/O, explicit for configuration]]
+- [[PN — EtherNet-IP uses CIP over standard TCP-UDP — implicit messaging for I-O, explicit for configuration]]
 - [[PN — PROFINET uses standard Ethernet but requires managed switches with QoS and IGMP snooping]]
 - [[PN — A DMZ between Level 3 and Level 4 prevents direct IT-to-OT routed connections]]
 - [[PN — Unmanaged switches in OT environments eliminate VLAN segmentation and span tree visibility]]
@@ -35,7 +35,7 @@ The **Purdue Reference Model** (ISA-95 hierarchy) structures OT networks into le
 ## Literature processed
 - [[LIT — NIST SP 800-82 Rev 3]]
 - [[LIT — Cisco Industrial Network Director Design Guide]]
-- [[LIT — ISA/IEC 62443-3-3 System Security Requirements]]
+- [[LIT — ISA-IEC 62443-3-3 System Security Requirements]]
 
 ## Open questions / seedlings
 - What VLAN scheme is currently in use at Argenta for Level 1 vs Level 2 devices?

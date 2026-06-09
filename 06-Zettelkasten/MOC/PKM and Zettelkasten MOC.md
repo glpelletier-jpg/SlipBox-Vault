@@ -56,7 +56,7 @@ Best starting notes for someone new to this cluster:
 - [[06-Zettelkasten/Fleeting/Evergreen notes are things or opinions about things|Evergreen notes are things or opinions about things]]
 - [[06-Zettelkasten/Fleeting/Evergreen note-writing helps insight accumulate|Evergreen note-writing helps insight accumulate]]
 - [[06-Zettelkasten/Fleeting/Evergreen note-making creates optionality in life|Evergreen note-making creates optionality in life]]
-- [[06-Zettelkasten/Fleeting/Evergreen note-writing helps insight accumulate|Evergreen note-writing helps insight accumulate]]
+- [[06-Zettelkasten/Fleeting/(Evergreen note-writing helps reading efforts accumulate)|(Evergreen note-writing helps reading efforts accumulate)]]
 - [[06-Zettelkasten/Fleeting/On the process of forging evergreen notes|On the process of forging evergreen notes]]
 
 ### Knowledge compounding
@@ -95,9 +95,9 @@ Best starting notes for someone new to this cluster:
 - [[06-Zettelkasten/Fleeting/Workflows MOC|Workflows MOC]]
 
 ### Critical perspectives / system design
-- *(S)(Article) Hard-Won Lessons from PKM and File Management — note missing*
+- [[06-Zettelkasten/Fleeting/(S)(Article) Hard-Won Lessons from PKM and File Management and Why I Built My Ow|(S) Hard-Won Lessons from PKM and File Management]]
 - (S) I Simplified My Productivity System
-- [[06-Zettelkasten/Fleeting/Defeat the Collector’s Fallacy [Second Brain Quickstart]|Defeat the Collector’s Fallacy]]
+- [[06-Zettelkasten/Fleeting/Defeat the Collector's Fallacy [Second Brain Quickstart]|Defeat the Collector's Fallacy]]
 - [[06-Zettelkasten/Fleeting/Stop losing your notes [Second Brain Quickstart]|Stop losing your notes]]
 
 ### Literature in vault
@@ -127,4 +127,4 @@ These claims are ready — each is supported by multiple notes above:
 
 ---
 
-**Links:** [[06-Zettelkasten/06-Zettelkasten|Zettelkasten]] | [[06-Zettelkasten/Permanent/capturing-ideas-at-point-of-contact-prevents-compounding-loss|Permanent — capturing ideas at point of contact]]
+**Links:** [[06-Zettelkasten/06-Zettelkasten|Zettelkasten]] | [[Capturing ideas at point of contact prevents the compounding loss of fleeting insights.|Permanent — Organizing my life]]

@@ -19,8 +19,8 @@ A PLC is a deterministic scan-cycle machine: **Input scan → Program execution 
 - [[PN — IEC 61131-3 defines five standard languages — LD, FBD, ST, IL, SFC — for portability across vendors]]
 - [[PN — Allen-Bradley Studio 5000 AOIs encapsulate reusable logic with local tags and parameters]]
 - [[PN — Siemens TIA Portal uses OB-FB-FC hierarchy for modular program organization]]
-- [[PN — Tag-based addressing in ControlLogix eliminates I/O slot dependency of legacy fixed-address PLCs]]
-- [[PN — Produced-consumed tags in Logix enable peer-to-peer data sharing over EtherNet/IP without explicit messaging]]
+- [[PN — Tag-based addressing in ControlLogix eliminates I-O slot dependency of legacy fixed-address PLCs]]
+- [[PN — Produced-consumed tags in Logix enable peer-to-peer data sharing over EtherNet-IP without explicit messaging]]
 - [[PN — UDTs enforce consistent data structures across AOIs and HMI faceplates]]
 
 ## Standards and references

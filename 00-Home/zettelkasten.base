@@ -24,3 +24,5 @@ views:
       - property: date
         direction: DESC
     limit: 6
+    columnSize:
+      file.name: 613

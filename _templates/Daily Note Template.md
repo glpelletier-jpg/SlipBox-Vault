@@ -200,6 +200,11 @@ dv.table(
 
 *Enter vitals in the Properties panel — the table above updates live.*
 
+> [!tip]- Energy not cooperating?
+> → [[Energy Menus - My Lists]]
+>
+
+
 ---
 
 ## Capture inbox

@@ -3,11 +3,17 @@ cssclasses: [weekly-calendar]
 ---
 
 ## 📅 Week of Jun 8 – 14, 2026
-*Refreshed: Mon, Jun 8, 3:07 PM*
+*Refreshed: Tue, Jun 9, 7:47 AM*
 
-### Monday, June 8 ← today
+### Monday, June 8
+- [ ] 11am – 12pm — **July maintenance Planning**
+  - *Argenta meeting*
+
+### Tuesday, June 9 ← today
 - [ ] All day — ✅ **🏃 Health Reset: Move for 30+ min**
   - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc386CmXx4jwG4*
+- [ ] All day — ✅ **🥗 Health Reset: Avoid main dietary drain**
+  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384xC6PcxcWW*
 - [ ] All day — ✅ **😴 Health Reset: In bed by target time**
   - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384rC8fjF87W*
 - [ ] All day — ✅ **Add all electrical services to project list**
@@ -16,18 +22,22 @@ cssclasses: [weekly-calendar]
   - *Project: Personal Complete this task: https://app.todoist.com/app/task/6gpj57gmJw6P8x3G*
 - [ ] All day — ✅ **Evening close: log vitals + energy + end-of-day note (8 min)**
   - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384vvHxR5j2W*
-- [ ] All day — ✅ **Focus minutes ctrl shift m**
-  - *Project: Inbox Complete this task: https://app.todoist.com/app/task/6gq38q68frq9F69j*
 - [ ] All day — ✅ **Get rose phone and watch to t mobile**
   - *Project: Inbox Complete this task: https://app.todoist.com/app/task/6gq2wWRRwfHqh5wj*
 - [ ] All day — ✅ **House in order toliets cleaned**
   - *Project: Inbox Complete this task: https://app.todoist.com/app/task/6gq2wm96f6Rv6VfC*
+- [ ] All day — ✅ **Log focus sessions in daily note throughout day**
+  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc385wRC52hC24*
+- [ ] All day — ✅ **Morning routine: Morgen → Todoist → Obsidian daily note (15 min)**
+  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc386f8R6fHRh4*
 - [ ] All day — ✅ **Pack our clothes**
   - *Project: Inbox Complete this task: https://app.todoist.com/app/task/6gq2wcMXpXFvFrqj*
 - [ ] All day — ✅ **Program thermostat**
   - *Project: Inbox Complete this task: https://app.todoist.com/app/task/6gq2wfR7x3GHxWrC*
 - [ ] All day — ✅ **Read G1A + G1B — frequency privileges and antenna rules**
   - *Project: HAM Radio — General License Complete this task: https://app.todoist.com/app/task/6gpM9qhwp33RRcpW*
+- [ ] All day — ✅ **Read G1C + G1D — power limits and VE rules**
+  - *Project: HAM Radio — General License Complete this task: https://app.todoist.com/app/task/6gpM9qqw5GvWC4r4*
 - [ ] All day — ✅ **Rename permanent note 'Organizing my life.md' to a proper claim title**
   - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc385Hc7pP8Jg4*
 - [ ] All day — ✅ **Start HAM Radio Week 1 — G1 Commission's Rules**
@@ -36,26 +46,6 @@ cssclasses: [weekly-calendar]
   - *Project: Vault Complete this task: https://app.todoist.com/app/task/6gpcf8wFjrMF6Gvw*
 - [ ] All day — ✅ **Write permanent note from Feel Good Productivity — 'Physical energy is the multiplier on all other productive capacity'**
   - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc385jCHJ992fW*
-- [ ] 11am – 12pm — **July maintenance Planning**
-  - *Argenta meeting*
-
-### Tuesday, June 9
-- [ ] All day — ✅ **🏃 Health Reset: Move for 30+ min**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc386CmXx4jwG4*
-- [ ] All day — ✅ **🥗 Health Reset: Avoid main dietary drain**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384xC6PcxcWW*
-- [ ] All day — ✅ **😴 Health Reset: In bed by target time**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384rC8fjF87W*
-- [ ] All day — ✅ **Evening close: log vitals + energy + end-of-day note (8 min)**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384vvHxR5j2W*
-- [ ] All day — ✅ **Log focus sessions in daily note throughout day**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc385wRC52hC24*
-- [ ] All day — ✅ **Morning routine: Morgen → Todoist → Obsidian daily note (15 min)**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc386f8R6fHRh4*
-- [ ] All day — ✅ **Read G1C + G1D — power limits and VE rules**
-  - *Project: HAM Radio — General License Complete this task: https://app.todoist.com/app/task/6gpM9qqw5GvWC4r4*
-- [ ] All day — ✅ **Send Jami her birth certificate**
-  - *Project: Personal Complete this task: https://app.todoist.com/app/task/6gjgh3FqpWJFx7Mp*
 
 ### Wednesday, June 10
 - [ ] All day — ✅ **🏃 Health Reset: Move for 30+ min**
@@ -74,17 +64,8 @@ cssclasses: [weekly-calendar]
   - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc386f8R6fHRh4*
 - [ ] All day — ✅ **Read G1E — control categories and interference rules**
   - *Project: HAM Radio — General License Complete this task: https://app.todoist.com/app/task/6gpM9qrM6j5jFM54*
-
-### Thursday, June 11
-- [ ] All day — ✅ **🏃 Health Reset: Move for 30+ min**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc386CmXx4jwG4*
-- [ ] All day — **📐 CAP Study — Automation Professional Cert**
-  - *CAP (Certified Automation Professional) exam prep. Target: Q3 2027. Use this block for domain review: automation systems…*
-- [ ] All day — ✅ **🥗 Health Reset: Avoid main dietary drain**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384xC6PcxcWW*
-- [ ] All day — ✅ **😴 Health Reset: In bed by target time**
-  - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384rC8fjF87W*
-- [ ] All day — ✅ **Evening close: log vitals + energy + end-of-day note (8 min)**
+- [ ] All day — ✅ **Send Jami her birth certificate**
+  - *Project: Personal Complete this task: https://app.todoist.com/app/task/6gjgh3FqpWJFx7Mp[ ] All day — ✅ **Evening close: log vitals + energy + end-of-day note (8 min)**
   - *Project: Routines Complete this task: https://app.todoist.com/app/task/6gpc384vvHxR5j2W*
 - [ ] All day — ✅ **get the steaks and prep for transport freeze some**
   - *Project: Inbox Complete this task: https://app.todoist.com/app/task/6gq2x3WXxjp7Vqxj*

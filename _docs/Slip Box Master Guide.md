@@ -1,27 +1,25 @@
 ---
-doc_type: master
-purpose: "Comprehensive vault reference — how everything works, why it works that way, and troubleshooting"
 tags: [no-tasks]
-updated: 2026-06-07
+updated: 2026-06-08
 ---
 
 # Slip Box — Master Guide
 
-*Use, Maintenance & Troubleshooting · Updated June 7, 2026*
+*Use, Maintenance & Troubleshooting · Updated June 8, 2026*
 
 ---
 
 ## Part 1: What this vault is
 
-The Slip Box is a personal operating system built around three tools — **Obsidian** (knowledge, reflection, reviews), **Todoist** (task management), and **Morgen** (scheduling and time-blocking). Each tool has a distinct lane; overlap is where friction comes from.
+The Slip Box is a personal operating system built around three tools — **Obsidian** (knowledge, reflection, reviews), **Todoist** (task management), and **Morgen Calendar** (scheduling). Each tool has a distinct lane; overlap is where friction comes from.
 
-| Tool | Owns |
-|---|---|
-| **Slip Box vault** | Intention, reflection, quest management, reviews, knowledge, vitals, Zettelkasten |
-| **Todoist** | All actionable tasks with due dates; quick capture; reminders |
-| **Morgen** | Time-bound events; time-blocking; unified calendar + task view for daily planning |
+| Tool | Owns | Does not own |
+|---|---|---|
+| **Slip Box vault** | Daily intention, habit tracking, focus logging, vitals, quest management, weekly/monthly/quarterly reviews, knowledge and thinking (Zettelkasten) | Task management with reminders, scheduling, calendar events |
+| **Todoist** | All actionable tasks — work and personal — with due dates; quick capture from anywhere; recurring tasks; reminders | Reflection, knowledge, long-form thinking |
+| **Morgen Calendar** | All time-bound events; time-blocking for focused work; the daily and weekly schedule view | Task management, reflection, note-taking |
 
-The vault is the anchor — open it every day. The full three-tool integration workflow lives in `_docs/Slip Box Integrated Workflow.md`.
+The vault is the anchor — open it every day. Morning order: **Morgen → Todoist → Obsidian**. Never reversed — checking the vault before looking at the calendar produces intentions that ignore reality.
 
 ---
 
@@ -53,7 +51,7 @@ Everything in the vault traces back to these:
 ## Part 2: Vault structure
 
 ```
-Slip Box/                         ~455 notes · as of June 7, 2026
+Slip Box/                         ~460 notes · as of June 8, 2026
 ├── .obsidian/                  Obsidian configuration — do not edit manually
 ├── _attachments/               PDFs and binary files — drag-and-drop saves here automatically
 │   ├── Attachment Catalog.md   Master index — add a row every time you add a file
@@ -63,56 +61,57 @@ Slip Box/                         ~455 notes · as of June 7, 2026
 │   ├── Daily-Notes/            Daily notes older than 90 days (batch-move quarterly)
 │   └── Quests/                 Completed or abandoned quests
 ├── _docs/                      System documentation — click folder to open navigation hub
-│   ├── _docs.md                MOC — categorised index of every doc with embedded live base view
-│   ├── docs.base               Live base view — All / Procedures / Reference / Guides / Evaluations
-│   ├── Slip Box Master Guide.md
-│   ├── Slip Box Integrated Workflow.md
+│   ├── _docs.md                Navigation hub — start here for any system question
+│   ├── Slip Box Master Guide.md          (this document)
 │   ├── Getting Started - First 30 Days.md
 │   ├── Vault State - June 2026.md
 │   ├── Vault Backup System.md
+│   ├── Commander — Quick Reference.md
 │   ├── Bulk Import Work Reference PDFs.md
-│   └── Evaluations/            Audit history — 12 evaluations (June 2026)
+│   ├── Life Compass — Complete Procedure.md
+│   ├── Zettelkasten — Complete Procedure.md
+│   ├── Vault Systems — Complete Procedure.md
+│   └── Evaluations/            Audit history — 14 evaluations (May–June 2026)
 ├── _reference/                 Reference material — looked up, not Zettelkasten-processed
-│   ├── Personal/               DMV, insurance, vehicle, home hunting · Body Composition Log
-│   └── Work/                   Process docs, SOPs · Field Notes.md (Todoist→vault capture landing)
+│   ├── Personal/               DMV, insurance, vehicle, home hunting (10 notes)
+│   └── Work/                   Process docs, SOPs
 ├── _scripts/                   QuickAdd macros + Templater scripts
-│   ├── weekly-calendar.js      Fetches Morgen/calendar ICS → Weekly Calendar.md (Ctrl+Shift+K)
+│   ├── weekly-calendar.js      Fetches Google Calendar ICS → Weekly Calendar.md (Ctrl+Shift+K)
 │   ├── next-week-calendar.js   Fetches next week ICS → Next Week Calendar.md (Ctrl+Shift+J)
 │   ├── daily-schedule.js       Templater user script — populates today's schedule in daily notes
-│   ├── vault-backup.bat        Git commit + push to GitHub (run manually)
-│   ├── open-*.js (4 files)     Unused — not wired to any QuickAdd choice; archive or delete
-│   └── fix-*.py (3 files)      One-time maintenance scripts already run; archive or delete
-├── _templates/                 29 note templates — do not write notes here
+│   └── vault-backup.bat        Git commit + push to GitHub (run manually or via Task Scheduler)
+├── _templates/                 18 note templates — do not write notes here
 ├── 00-Home/                    Dashboard and base views only
 ├── 01-Vision/                  Life Compass and Future Vision
 ├── 02-Quests/                  Active quests — Health Reset Q3 + New Role Integration Q3
 ├── 03-Reviews/
-│   ├── Weekly/                 W20–W24 (2026) — auto-created via Periodic Notes
+│   ├── Weekly/                 W20–W23 (2026) — auto-created via Periodic Notes (Ctrl+Shift+W)
 │   ├── Monthly/                May 2026, June 2026
-│   ├── Quarterly/              Q2 2026 review
-│   ├── Plan-Actual/            Planning diagnosis notes (weekly/monthly/quarterly) — folder + templates ready
-│   └── Workouts/               Workout log notes — auto-template via Templater; create via Workout Log Template
-├── 04-Daily-Notes/             May 21 – Jun 7, 2026 (18 notes) · schedule auto-populates on creation
+│   └── Quarterly/              Q2 2026 review
+├── 04-Daily-Notes/             May 21 – Jun 8, 2026 · schedule auto-populates on creation
 ├── 05-Resources/
 │   ├── Articles/               Articles to read / reading / done
 │   ├── Books/                  32 book notes — reading tracker, linked to Literature notes
 │   ├── Courses/
-│   │   ├── HAM-Radio/          General License study system — Master Reference, Syllabus
-│   │   ├── GPS-Tracker-Project/ Paul McWhorter Raspberry Pi series (6 lessons)
+│   │   ├── HAM-Radio/          General License study system — started Jun 8, 2026
+│   │   ├── GPS-Tracker-Project/ Paul McWhorter Raspberry Pi series
 │   │   └── MIT-CS/             MIT OpenCourseWare notes
 │   └── Ideas/                  Project-shaped sparks; pipeline to quests
 ├── 06-Zettelkasten/
-│   ├── Fleeting/               141 notes — triage script ready (`_scripts/fleeting-triage.js`), target <50
-│   ├── Literature/             38 notes — 19 rebuilt to proper template June 2026
-│   ├── Permanent/              6 notes — all using claim-based kebab-case titles
+│   ├── Fleeting/               ~150 notes — processing queue active (10/week target)
+│   ├── Literature/             49 notes — includes 11 IA/OT reference stubs (June 2026)
+│   ├── Permanent/              28 notes — 6 original + 22 IA/OT domain stubs (June 2026)
 │   └── MOC/                    4 Maps of Content:
 │                               · Automation Engineering MOC
 │                               · HAM Radio MOC
 │                               · PKM and Zettelkasten MOC
 │                               · Personal Growth MOC
+│                               · MOC — Instrumentation
+│                               · MOC — OT Networking
+│                               · MOC — PLC Architecture
+│                               · MOC — Process Safety (IEC 61511)
 └── 07-Work-Knowledge/          38 notes — professional knowledge + CAP prep
     ├── Automation/             12 notes — full electrical fundamentals sequence
-    │                           DC Theory → Current → Ohm's Law → Power → Sources & Loads
     ├── Networking/             9 notes — OT/IT, Windows Server, Linux, AWS
     ├── Processes/              10 notes — pharma manufacturing, SOPs, documentation
     ├── Troubleshooting/        2 notes
@@ -121,7 +120,7 @@ Slip Box/                         ~455 notes · as of June 7, 2026
 
 ### Files in 00-Home
 
-`00-Home` is now **operational only** — the dashboard and its base views. All system documentation lives in `_docs/`.
+`00-Home` is **operational only** — the dashboard and its base views. All system documentation lives in `_docs/`.
 
 | File | Purpose |
 |---|---|
@@ -130,44 +129,99 @@ Slip Box/                         ~455 notes · as of June 7, 2026
 | `focus-log.base` | Powers the Focus log chart |
 | `reading-list.base` | Powers the Currently Reading section |
 | `zettelkasten.base` | Powers the Recent Permanent Notes section |
-| `daily-focus.base` | Morning intention vs. end-of-day tracker — embedded in dashboard and all reviews |
+| `daily-focus.base` | Morning intention vs. end-of-day tracker |
 | `vitals.base` | Powers the Vitals Tracker |
-| `courses.base` | Powers the Active Courses section |
 | `weekly-reviews.base` | Powers the Recent Weekly Reviews section |
 | `monthly-reviews.base` | Powers the Recent Monthly Reviews section |
 | `quarterly-reviews.base` | Powers the Recent Quarterly Reviews section |
-| `plan-actual.base` | Planning Diagnosis — all Plan vs. Actual notes; tabs: All / Weekly / Monthly / Quarterly / Needs attention |
-| `Weekly Calendar.md` | Generated by `Ctrl+Shift+K` — current week calendar |
-| `Next Week Calendar.md` | Generated by `Ctrl+Shift+J` — next week calendar |
+| `Weekly Calendar.md` | Generated by `Ctrl+Shift+K` — current week from Google Calendar |
+| `Next Week Calendar.md` | Generated by `Ctrl+Shift+J` — next week from Google Calendar |
 
 ### Files in _docs
 
 | File | Purpose |
 |---|---|
-| `_docs.md` | MOC — categorised index of every doc; open by clicking the `_docs` folder |
-| `docs.base` | Live base view of all docs — sort and filter by type, purpose, date |
+| `_docs.md` | Navigation hub — single entry point for all system documentation |
 | `Slip Box Master Guide.md` | This document — full reference |
-| `Slip Box Integrated Workflow.md` | Three-tool workflow (vault + Todoist + Morgen) |
 | `Getting Started - First 30 Days.md` | Onboarding checklist |
 | `Vault State - June 2026.md` | Monthly health check + quarterly audit queries — **run this monthly** |
-| `Vault Quick Reference.md` | All hotkeys, QuickAdd commands, Commander buttons — one page |
-| `Vault Backup System.md` | Backup procedure, locations, and restore steps |
+| `Vault Backup System.md` | Backup architecture, setup, and restore procedures |
+| `Commander — Quick Reference.md` | Toolbar/Ribbon/Tab Bar button reference + troubleshooting |
 | `Bulk Import Work Reference PDFs.md` | Procedure for bulk-importing vendor PDFs |
-| `Commander — Quick Reference.md` | Commander plugin config — button IDs, modes, troubleshooting |
-| `Life Compass — Complete Procedure.md` | Values, roles, energy audit — initial setup and quarterly review |
-| `Zettelkasten — Complete Procedure.md` | Full Zettelkasten workflow — all 4 note types, processing, linking, MOCs |
-| `Vault Systems — Complete Procedure.md` | Daily notes, focus log, vitals, quests, resources, backup |
-| `Reviews & Planning — Complete Procedure.md` | Daily → weekly → monthly → quarterly review → quarterly planning + Plan vs. Actual |
-| `reMarkable Integration — Complete Procedure.md` | Capturing from reMarkable tablet via PDF export |
-| `Galaxy Watch Ultra.md` | Complete watch guide — all settings, health features, workouts, safety, vault integration |
-| `Galaxy Watch Ultra — Personalized Setup.md` | Step-by-step setup tied to Health Reset and New Role Integration quests |
-| `Evaluations/` | Audit history — 12 evaluations (June 2026) |
+| `Life Compass — Complete Procedure.md` | Step-by-step guide: values, roles, energy audit, quarterly review |
+| `Zettelkasten — Complete Procedure.md` | Step-by-step guide: all 4 note types, processing, linking, MOCs |
+| `Vault Systems — Complete Procedure.md` | Step-by-step guide: daily notes, vitals, reviews, quests, backup |
+| `Evaluations/` | Audit history — 14 evaluations (May–June 2026) |
 
 ---
 
-## Part 3: Plugin reference
+## Part 3: Three-tool system
 
-### Community plugins (17 installed, as of June 7 2026)
+### What each tool owns
+
+| Tool | Owns | Does not own |
+|---|---|---|
+| **Slip Box vault** | Intention, reflection, quests, reviews, knowledge, vitals, Zettelkasten | Task reminders, scheduling, calendar events |
+| **Todoist** | All actionable tasks with due dates; recurring tasks; inbox capture | Reflection, knowledge, long-form thinking |
+| **Morgen Calendar** | Time-bound events; time-blocking; the daily schedule view | Task management, reflection, note-taking |
+
+### Connection points
+
+```
+Morgen Calendar ←→ Todoist
+  Shows time-bound events + Todoist tasks together
+  Time-block Todoist priorities in Morgen
+
+Todoist ←→ Slip Box vault
+  Quest milestones → Todoist tasks with due dates
+  Todoist inbox captures → vault if insight, stay in Todoist if task
+  Weekly review quest progress → informs Todoist task rescheduling
+
+Morgen Calendar ←→ Slip Box vault
+  Ctrl+Shift+K / J → live Google Calendar view inside Obsidian
+  Calendar shape → informs daily note focus_intention
+  Next week's calendar → informs weekly review Section 7
+```
+
+### Todoist quick links
+
+| Project | What lives here | Link |
+|---|---|---|
+| Inbox | Unprocessed captures — process to zero every Sunday | [todoist://inbox](todoist://inbox) |
+| Work | Work Admin, Professional Development, OT System, Troubleshooting | [todoist://project?id=6gj9XJ56ccgp93vg](todoist://project?id=6gj9XJ56ccgp93vg) |
+| Personal | House, Finances, Medical, Insurance, Pets, Travel, Admin | [todoist://project?id=6gj9XJ2wWPr4vHxG](todoist://project?id=6gj9XJ2wWPr4vHxG) |
+| LifeOS Learning | System-building tasks — Life Compass, Quests setup, vault work | [todoist://project?id=6gmgpP4Cp8R8wCGh](todoist://project?id=6gmgpP4Cp8R8wCGh) |
+| Work Backlog | Work tasks not ready to action yet | [todoist://project?id=6gjPGQG8PWJhWRWh](todoist://project?id=6gjPGQG8PWJhWRWh) |
+| Personal Backlog | Personal tasks not ready to action yet | [todoist://project?id=6gjPGJRHrMgcmRcM](todoist://project?id=6gjPGJRHrMgcmRcM) |
+
+### Capture routing
+
+| Type | Where it goes |
+|---|---|
+| Work task | Todoist → Work project (or Inbox on the go) |
+| Personal task / errand | Todoist → Personal project (or Inbox) |
+| Thought / insight | `Ctrl+Shift+C` → Obsidian daily capture (no context switch) |
+| Fleeting idea needing its own note | `Ctrl+Shift+F` → Obsidian Fleeting folder |
+| Quest-related action | Quest note: `- [ ] Action 📅 YYYY-MM-DD` |
+| Meeting to schedule | Morgen Calendar directly |
+
+### Calendar scripts
+
+All three calendar scripts share the same Google Calendar ICS URL stored in QuickAdd settings (Settings → QuickAdd → Manage Macros → ⚙️ → `ics_url` field).
+
+| Script | Trigger | Writes to |
+|---|---|---|
+| `_scripts/weekly-calendar.js` | `Ctrl+Shift+K` | `00-Home/Weekly Calendar.md` |
+| `_scripts/next-week-calendar.js` | `Ctrl+Shift+J` | `00-Home/Next Week Calendar.md` |
+| `_scripts/daily-schedule.js` | Templater (auto on daily note creation) | `### 📅 Today's schedule` section |
+
+If the schedule section shows `⚠️ No calendar ICS URL found`, open QuickAdd → Manage Macros → Weekly Calendar → ⚙️ and verify the `ics_url` field is populated.
+
+---
+
+## Part 4: Plugin reference
+
+### Community plugins (15 installed)
 
 | Plugin | Role |
 |---|---|
@@ -182,14 +236,10 @@ Slip Box/                         ~455 notes · as of June 7, 2026
 | **Commander** | Adds custom buttons to the Ribbon, Tab Bar, and note Toolbar |
 | **Folder Notes** | Makes folder names clickable — opens their index note |
 | **Notebook Navigator** | Clean folder panel view |
-| **Linter** | Auto-normalizes frontmatter on save (templates folder excluded) |
+| **Linter** | Auto-normalizes frontmatter on save (templates folder excluded; `force-yaml-escape: OFF`) |
 | **Note Refactor** | Extract selected text to a new note |
 | **Heatmap Calendar** | Focus time streak visualization on dashboard |
 | **Minimal Theme Settings** | Controls for Minimal theme appearance |
-| **Morgen Tasks** | Syncs vault tasks (Quests, Daily Notes, Troubleshooting) to Morgen for time-blocking; completion in Morgen checks off in vault |
-| **Morgen (ID decorator)** | Hides or stylizes the `🆔` task IDs that Morgen adds to synced tasks |
-
-> ⚠️ **Periodic Notes is on v0.0.17** — check Community Plugins for an update. This plugin drives all weekly/monthly/quarterly note creation.
 
 ### Core plugins (must stay enabled)
 
@@ -203,7 +253,7 @@ Slip Box/                         ~455 notes · as of June 7, 2026
 
 ---
 
-## Part 4: Hotkey reference
+## Part 5: Hotkey reference
 
 | Action | Hotkey | Notes |
 |---|---|---|
@@ -217,45 +267,29 @@ Slip Box/                         ~455 notes · as of June 7, 2026
 | Fetch next week calendar | `Ctrl+Shift+J` | Writes to `00-Home/Next Week Calendar.md` |
 | Extract to new note | `Ctrl+Shift+E` | Note Refactor — splits selected text |
 | Open graph view | `Ctrl+G` | Color-coded by note type |
-| **Update focus_minutes** | `Ctrl+Shift+M` *(assign this)* | Templater: reads all `[duration:: N]` entries, sums them, writes total to `focus_minutes:` frontmatter automatically |
-
-> **To assign the focus minutes hotkey:** Settings → Hotkeys → search "Update Focus Minutes" → click `+` → press `Ctrl+Shift+M`
 
 ---
 
-## Part 5: Daily workflow
+## Part 6: Daily workflow
 
-The morning sequence runs across three tools in a fixed order. Don't reverse it — checking the vault before looking at the calendar produces intentions that ignore reality.
+The morning sequence runs across three tools in a fixed order. Don't reverse it.
 
-### Morning (10 minutes)
+### Morning (15 minutes)
 
-**Step 1 — Morgen (8 min)**
-Open Morgen — this is your single "what does today look like" view. It shows calendar events and Todoist tasks together, plus any vault quest tasks already time-blocked.
-- See today's shape — meetings, blocks, real available time — before touching the vault
-- Are today's Todoist tasks realistic given the calendar?
-- Process overnight Todoist inbox items (project + date, 2 min max each)
-- Reschedule anything that won't happen today
-- Identify 1–2 most important tasks and drag them onto the calendar to time-block
+**Step 1 — Morgen Calendar (3 min)**
+Open Morgen or press `Ctrl+Shift+K` to pull this week's calendar into the vault. See today's shape — meetings, blocks, real available time — before touching Todoist or the vault.
 
-Daily Todoist goal: 5 tasks completed.
+**Step 2 — Todoist Today view (5 min)** — [todoist://today](todoist://today)
+With the calendar shape visible: are today's tasks realistic? Process overnight inbox. Reschedule anything that won't happen. Identify your 1–2 most important tasks. Daily goal: 5 completed tasks.
 
-**Step 2 — Obsidian daily note (5 min)** — `Ctrl+D`
-- **Today's schedule** — auto-populates from your calendar ICS when the note is created. Review events before writing your intention.
-- **Today's focus** — prompted automatically when the note opens. Type one sentence ("what would make today a win?") and it goes directly into `focus_intention:` frontmatter and the note body — no manual copy. Feeds the daily-focus base.
-- **Quest habits** — which Health Reset habits will you do today? Commit now.
-- **Morning vitals** — BP, pulse, glucose, weight. Takes 2 minutes.
-- Scan the **Tasks** query — vault tasks due today?"
+**Step 3 — Obsidian daily note (5 min)** — `Ctrl+D`
+- **Today's schedule** — auto-populates from Google Calendar on note creation
+- **Today's focus** — one sentence in `focus_intention:` (Properties panel)
+- **Quest habits** — which Health Reset habits will you do today? Commit now
+- **Morning vitals** — BP, pulse, glucose, weight
+- Scan the **Tasks** query — vault tasks due today?
 
-### Capture routing during the day
-
-| What surfaced | Where it goes |
-|---|---|
-| Work task | Todoist → Work project (or Inbox) |
-| Personal task | Todoist → Personal project (or Inbox) |
-| Thought / insight | `Ctrl+Shift+C` → daily capture (no context switch) |
-| Idea needing its own note | `Ctrl+Shift+F` → Fleeting folder |
-| Quest action | Quest note: `- [ ] Action 📅 YYYY-MM-DD` → appears in Morgen automatically |
-| Meeting to schedule | Morgen / Google Calendar directly |
+**Step 4 — Morgen time-block (2 min)** — block protected focus time now.
 
 ### Logging focus sessions
 
@@ -270,7 +304,7 @@ The `Total today:` line sums automatically. Copy the total to `focus_minutes:` i
 
 ### End of day (8 minutes)
 
-1. **Morgen (2 min):** Check tomorrow's calendar shape. Drag priorities onto tomorrow's calendar. Confirm Todoist tasks for tomorrow are realistic.
+1. **Morgen (2 min):** Check tomorrow's calendar. Create focus blocks for tomorrow's priorities.
 2. **Todoist (3 min):** Reschedule undone tasks. Process inbox. Confirm tomorrow's list.
 3. **Obsidian daily note (3 min):**
    - Enter steps, weight, energy (1–5) in Properties
@@ -280,94 +314,67 @@ The `Total today:` line sums automatically. Copy the total to `focus_minutes:` i
 
 ---
 
-## Part 5b: Calendar scripts
-
-All three calendar scripts share the same ICS URL stored in QuickAdd settings (Settings → QuickAdd → Manage Macros → ⚙️ → `ics_url` field).
-
-| Script | Trigger | Writes to |
-|---|---|---|
-| `_scripts/weekly-calendar.js` | `Ctrl+Shift+K` | `00-Home/Weekly Calendar.md` |
-| `_scripts/next-week-calendar.js` | `Ctrl+Shift+J` | `00-Home/Next Week Calendar.md` |
-| `_scripts/daily-schedule.js` | Templater (auto on note creation) | Today's daily note — `### 📅 Today's schedule` section |
-
-Weekly and next-week events render as:
-```
-- [ ] 8:30am – 9:30am — **Standup** 👤 *Team* 📍 *Conference Room*
-```
-
-Daily schedule events render as:
-```
-- [ ] `9am – 10am` — **Standup**
-- [ ] `All day` — **National Holiday**
-```
-
-`daily-schedule.js` runs as a Templater user function. It reads the ICS URL from QuickAdd's stored settings automatically — no extra configuration needed. If the schedule section shows `⚠️ No calendar ICS URL found`, open QuickAdd → Manage Macros → Weekly Calendar → ⚙️ and verify the `ics_url` field is filled.
-
----
-
-## Part 6: Weekly workflow — Sunday (~50 minutes)
+## Part 7: Weekly workflow — Sunday (~50 minutes)
 
 Do Todoist and Morgen **before** opening the vault.
 
-### Step 1 — Todoist (8 min)
-Inbox to zero. Overdue review. Confirm next week's top 5–7 non-vault tasks have due dates. Check backlogs.
+### Step 1 — Todoist (10 min)
+Inbox to zero. Overdue review — no task stays overdue more than one week. Confirm next week's top 5–7 tasks have due dates. Check backlogs.
 
-> **Note:** Quest milestone tasks no longer need to be duplicated into Todoist. They live in vault quest notes and sync to Morgen automatically via the Morgen Tasks plugin.
-
-### Step 2 — Morgen (5 min)
-Open Morgen and review next week's calendar. Drag vault quest tasks from the Morgen task panel onto next week's calendar. Time-block Todoist priorities. Resolve conflicts now. You can also use `Ctrl+Shift+J` to pull next week's calendar into the vault for reference.
+### Step 2 — Morgen Calendar (5 min)
+Open `Ctrl+Shift+J` to pull next week's calendar. Time-block the Todoist priorities. Resolve conflicts now.
 
 ### Step 3 — Obsidian weekly review (25 min) — `Ctrl+Shift+W`
 
-Work through all 9 sections:
+**Section 1 — Clear the decks:** The Todoist + Morgen work just done counts here.
 
-**Section 1 — Clear the decks:** The Todoist + Morgen planning just done counts here.
+**Section 2 — Life area check-in:** Rate 6 areas 1–5. Vitals Dataview table auto-shows this week's health data. Copy overall rating to `rating:` frontmatter.
 
-**Section 2 — Life area check-in:** Rate 6 areas 1–5. The vitals Dataview table auto-shows this week's health data below the Health & energy row. Copy overall rating to `rating:` frontmatter.
+**Section 3 — Focus hours:** Fully automatic. Dataview pulls `focus_minutes` from each daily note. DataviewJS totals them, shows a progress bar against the 1,200 min target, and prompts you to copy the total to `focus_minutes:` frontmatter.
 
-**Section 3 — Focus hours:** Fully automatic. The Dataview table pulls `focus_minutes` from each daily note in the week's range. The DataviewJS block totals them, shows a progress bar against the 1,200 min target, and prompts you to copy the total to `focus_minutes:` frontmatter.
+**Section 4 — Three wins:** Open `daily-focus.base` on "Last 7 days" view — morning intentions are there to jog memory.
 
-**Section 4 — Three wins:** Open the `daily-focus.base` on "Last 7 days" view — your morning intentions are right there to jog memory.
-
-**Section 5 — Quest progress:** Dataview shows active quests with health indicators. Update `progress:` in any quest note where milestones completed.
+**Section 5 — Quest progress:** Dataview shows active quests. Update `progress:` in any quest where milestones completed.
 
 **Section 6 — Reflection prompts:** Answer 2–3 honestly. No editing.
 
-**Section 7 — Next week intention:** One sentence + 3 specific priorities + one quest milestone. Use `Ctrl+Shift+J` to pull next week's calendar.
+**Section 7 — Next week intention:** One sentence + 3 specific priorities + one quest milestone.
 
 **Section 8 — Zettelkasten processing:**
-- **8a:** Dataview surfaces the 5 oldest fleeting notes. Process each: promote to permanent, archive to literature, or delete.
+- **8a:** Dataview surfaces the 5 oldest fleeting notes. Process each: promote / archive / delete.
 - **8b:** Shows permanent notes written this week. If empty — write one before closing.
-- **8c:** DataviewJS shows inbox size with a status indicator that escalates the weekly target as backlog grows.
+- **8c:** DataviewJS inbox health with status indicator that escalates target if backlog grows.
 
-**Section 9 — Capture anything else.**
-
-### Step 4 — Quest milestone review (2 min)
-Review active quest notes. Add any new milestone tasks with due dates — they appear in Morgen automatically via the Morgen Tasks plugin. No Todoist duplication needed for quest tasks. Non-vault tasks (admin, errands, calls) still go to Todoist as before.
-
----
-
-## Part 7: Monthly workflow — end of month (~30–45 min)
-
-Click "New monthly review" on the dashboard. Read back through the month's weekly reviews first.
-
-Key additions: fill `focus_minutes_total` and `rating` frontmatter from the metrics table. Note *direction of travel* per life area — trend matters more than the number. Run the **Monthly health check** section in `00-Home/Vault State - June 2026.md` — the orphan detector and fleeting inbox trend queries live there.
+### Step 4 — Quest–Todoist sync (5 min)
+Any completed or upcoming quest milestones → create corresponding Todoist task with due date.
+- Health Reset → [Personal project](todoist://project?id=6gj9XJ2wWPr4vHxG)
+- Work quest → [Work project](todoist://project?id=6gj9XJ56ccgp93vg)
 
 ---
 
-## Part 8: Quarterly workflow — end of quarter (~60–90 min)
+## Part 8: Monthly workflow — end of month (~30–45 min)
+
+Dashboard → New monthly review. Read back through the month's weekly reviews first.
+
+Fill `focus_minutes_total` and `rating` frontmatter from the metrics table. Note *direction of travel* per life area — trend matters more than the number. Run the **Monthly health check** section in `_docs/Vault State - June 2026.md`.
+
+---
+
+## Part 9: Quarterly workflow — end of quarter (~2–3 hours)
 
 The most important review in the system. Do not rush it.
 
-Read back through all weekly reviews, all monthly reviews, every quest note, and your Life Compass and Future Vision before starting. The 14-section quarterly review covers: quest retrospective, life area deep-dive, ten wins, values and identity check, vision check, learning summary, and planning for next quarter.
+**Step 1 — Todoist (30 min):** Archive completed tasks. Review backlogs. Mark LifeOS Learning sections complete if now living in the vault.
 
-**Run the quarterly audit queries in `00-Home/Vault State - June 2026.md`:** fleeting → permanent conversion rate, archive-ready processed notes, Work Knowledge coverage, CAP domain coverage, HAM study progress.
+**Step 2 — Morgen Calendar (15 min):** Block dates for next quarter: Quarterly Review, Quarterly Planning, monthly reviews.
 
-After the review: run a Quarterly Planning session — `Ctrl+P` → "QuickAdd: New Quarterly Plan" → creates a planning note in `03-Reviews/Quarterly/`. The planning note appears alongside reviews in the `quarterly-reviews.base` dashboard panel.
+**Step 3 — Obsidian Quarterly Review (60–90 min):** Dashboard → New quarterly review. Read back through all weekly reviews, monthly reviews, every quest note, and Life Compass + Future Vision. 14 sections: quest retrospective, life area deep-dive, ten wins, values and identity check, vision check, learning summary. Run the quarterly audit queries in `_docs/Vault State - June 2026.md`.
+
+**Step 4 — Quarterly Planning (30 min):** Design next quarter's quests (1–3 max). For each quest's key milestones, create a Todoist task with the quarter's end date as a soft deadline.
 
 ---
 
-## Part 9: Quests
+## Part 10: Quests
 
 Quests are 90-day focused efforts tied to one life area. Keep 1–3 active at a time.
 
@@ -386,7 +393,7 @@ Keep Completed and Abandoned quests — they're more valuable for quarterly retr
 
 ---
 
-## Part 10: Vision documents
+## Part 11: Vision documents
 
 **Life Compass** (`01-Vision/life-compass.md`) — Core values (3–5, personally defined), life roles with "showing up well" descriptions, and energy audit (1–5 per area). Fill this before creating any quests. Every quest should connect to it in one sentence. Review and update at each quarterly review.
 
@@ -394,25 +401,19 @@ Keep Completed and Abandoned quests — they're more valuable for quarterly retr
 
 ---
 
-## Part 11: Zettelkasten — the thinking layer
+## Part 12: Zettelkasten — the thinking layer
 
 ### The four note types
 
-**Fleeting notes** (`06-Zettelkasten/Fleeting/`) — Quick captures. Format doesn't matter. Process or delete within 48 hours. These are an inbox, not storage. **Current backlog: 141 notes. Use `_scripts/fleeting-triage.js` (QuickAdd macro) to open the oldest note and choose Archive / Promote / Delete / Skip in one step. Target: below 50.**
+**Fleeting notes** (`06-Zettelkasten/Fleeting/`) — Quick captures. Process or delete within 48 hours. These are an inbox, not storage. **Current backlog: ~150 notes. Target: process 10 per weekly review until below 50.**
 
-**Literature notes** (`06-Zettelkasten/Literature/`) — One note per source, everything in your own words. Template structure (June 2026): source in one sentence → key ideas → my reaction → permanent notes spawned → connections → source highlights. 38 notes, 19 rebuilt to proper template. Each book note in `05-Resources/Books/` now has a `literature_note:` link pointing to its counterpart here.
+**Literature notes** (`06-Zettelkasten/Literature/`) — One note per source, everything in your own words. 49 notes as of June 2026: 38 original + 11 IA/OT reference stubs (IEC 61511-1, NIST 800-82, Studio 5000 manual, etc.). Each book note in `05-Resources/Books/` links to its counterpart here via `literature_note:` frontmatter.
 
-**Permanent notes** (`06-Zettelkasten/Permanent/`) — The core of the system. One atomic idea per note. Title must be a complete claim in kebab-case. Current notes 01–05 need to be renamed — use F2 in Obsidian to rename to the claim title directly:
+**Permanent notes** (`06-Zettelkasten/Permanent/`) — The core of the system. One atomic idea per note. Title must be a complete claim. 28 notes as of June 2026: 6 original cross-domain notes + 22 IA/OT domain stubs across instrumentation, PLC architecture, OT networking, and process safety. Stubs have empty body sections — fill one per week from the claim in the frontmatter.
 
-| ❌ Topic | ✅ Claim |
-|---|---|
-| Habits | Habits are cues, not willpower |
-| Deep work | Depth of focus multiplies output quality |
-| Resistance | Resistance is friction — it opposes current, converts electrical energy to work |
+Rules: self-contained, your words, linked (≥ 2 outbound links), one idea. **Target: 1 new completed note per week.**
 
-Rules: self-contained, your words, linked (≥ 2 outbound links), one idea. **Current count: 6. Target: 1 new per week.**
-
-**Maps of Content** (`06-Zettelkasten/MOC/`) — Navigation notes created reactively when a cluster gets too large to hold in your head. Current MOCs: Automation Engineering, HAM Radio, PKM & Zettelkasten, Personal Growth.
+**Maps of Content** (`06-Zettelkasten/MOC/`) — Navigation notes created reactively when a cluster gets large. Current MOCs: Automation Engineering, HAM Radio, PKM & Zettelkasten, Personal Growth, Instrumentation, OT Networking, PLC Architecture, Process Safety (IEC 61511).
 
 ### Zettelkasten processing workflow
 
@@ -426,53 +427,31 @@ Link     →  Add ≥ 2 outbound links before closing
 Navigate →  Create MOC when cluster is too large to hold in head
 ```
 
-The **Weekly Review Section 8** is the dedicated processing slot. The Dataview queue surfaces the 5 oldest fleeting notes automatically — no hunting.
-
-### Zettelkasten health indicators
-
-| Indicator | Action |
-|---|---|
-| Fleeting notes > 100 | Process 10/week instead of 5 |
-| Permanent notes with < 2 outbound links | Add links before the next review |
-| No new permanent notes this week | Write one before closing the weekly review |
-| Ideas parked 90+ days | Promote or delete — make a decision |
+The **Weekly Review Section 8** is the dedicated processing slot. The Dataview queue surfaces the 5 oldest fleeting notes automatically.
 
 ---
 
-## Part 12: Work Knowledge base
+## Part 13: Work Knowledge base
 
-`07-Work-Knowledge/` is the professional reference layer — 36 notes across 5 subfolders.
+`07-Work-Knowledge/` is the professional reference layer — 38 notes across 5 subfolders.
 
 ### Electrical fundamentals sequence (Automation subfolder)
 
-The notes follow a deliberate learning sequence:
+1. [[07-Work-Knowledge/Automation/Basic Direct Current (DC) Theory - Overview|① DC Theory Overview]]
+2. [[07-Work-Knowledge/Automation/Basics of Electrical Current|② Basics of Electrical Current]]
+3. [[07-Work-Knowledge/Automation/Electrical Resistance and Ohm's Law|③ Electrical Resistance & Ohm's Law]]
+4. [[07-Work-Knowledge/Automation/What is Electrical Power|④ Electrical Power]]
+5. [[07-Work-Knowledge/Automation/Electrical Sources and Electronic Load|⑤ Sources and Loads]]
 
-1. [[07-Work-Knowledge/Automation/Basic Direct Current (DC) Theory - Overview|① DC Theory Overview]] — voltage and potential energy
-2. [[07-Work-Knowledge/Automation/Basics of Electrical Current|② Basics of Electrical Current]] — electron drift, conductors
-3. [[07-Work-Knowledge/Automation/Electrical Resistance and Ohm's Law|③ Electrical Resistance & Ohm's Law]] — V=IR, series/parallel circuits
-4. [[07-Work-Knowledge/Automation/What is Electrical Power|④ Electrical Power]] — Watt's Law, P=VI
-5. [[07-Work-Knowledge/Automation/Electrical Sources and Electronic Load|⑤ Sources and Loads]] — voltage sources driving resistive loads
-
-> These fundamentals apply directly to both **CAP exam Domains 1 & 3** and the **HAM General License G5 sub-element**. The HAM Radio MOC notes the crossover explicitly.
+These fundamentals apply directly to **CAP exam Domains 1 & 3** and the **HAM General License G5 sub-element**. The HAM Radio MOC notes the crossover explicitly.
 
 ### CAP Certification prep
 
-`07-Work-Knowledge/CAP-Certification/` has the domain breakdown and study timeline. Target: Q3 2027. Notes tagged `CAP-prep` are queryable — the Quarterly Audit in Vault State surfaces them.
+`07-Work-Knowledge/CAP-Certification/` has the domain breakdown and study timeline. Target: Q3 2027. Notes tagged `CAP-prep` are queryable via the quarterly audit in Vault State.
 
----
+### HAM Radio study
 
-## Part 13: Attachment system
-
-`_attachments/` holds all binary files. The Attachment Catalog (`_attachments/Attachment Catalog.md`) tracks every file with a companion note.
-
-**reMarkable Paper Pro integration:** The reMarkable Sync plugin is currently non-functional and awaiting a plugin update. Use USB or the reMarkable desktop app to export notebooks as PDFs and place them in `_attachments/reMarkable/`. See [[_docs/reMarkable Integration — Complete Procedure|reMarkable Integration]] for the full workflow.
-
-**10 Rockwell PDF manuals** currently live in `_attachments/Work/Automation/`, each with a companion `.md` note that includes title, description, key topics, and a link back to the relevant Work Knowledge note.
-
-**Adding a new attachment:**
-1. Drag the file into Obsidian — it saves to `_attachments/` automatically
-2. Create a companion note using the Attachment Note Template
-3. Add a row to `_attachments/Attachment Catalog.md`
+`05-Resources/Courses/HAM-Radio/` — General License study system. Started June 8, 2026 with G1 Commission's Rules. Week-by-week syllabus with HamStudy.org integration.
 
 ---
 
@@ -490,38 +469,32 @@ The notes follow a deliberate learning sequence:
 | Idea | `05-Resources/Ideas/` | `area`, `status` (raw/developing/parked/promoted) |
 | Fleeting Note | `06-Zettelkasten/Fleeting/` | `id` (timestamp), `date`, `type: fleeting` |
 | Literature Note | `06-Zettelkasten/Literature/` | `type: literature`, `source-type`, `source-author`, `book_note` |
-| Permanent Note | `06-Zettelkasten/Permanent/` | `type: permanent` — rename immediately to a claim |
+| Automation Lit Note | `06-Zettelkasten/Literature/` | `type: literature`, `vendor`, `source_type`, `standard_ref` |
+| Permanent Note | `06-Zettelkasten/Permanent/` | `type: permanent` — rename immediately to claim title |
+| Automation PN | `06-Zettelkasten/Permanent/` | `type: permanent`, `maturity`, `domain: ia-ot`, `subdomain`, `moc` |
 | MOC | `06-Zettelkasten/MOC/` | `type: moc` |
 | Attachment Note | Manual | `type: attachment`, `tags`, `source_doc` |
-| Course Overview | `05-Resources/Courses/[slug]/` | `type: course-overview`, `course`, `status`, `credential`, `target_date`, `effort_hours_estimated` |
-| Course Syllabus | `05-Resources/Courses/[slug]/` | `type: course-syllabus`, `course`, `total_weeks` |
-| Course Resources | `05-Resources/Courses/[slug]/` | `type: course-resources`, `course` |
-| Course Progress | `05-Resources/Courses/[slug]/` | `type: course-progress`, `course`, `status`, `target_score`, `exam_date` |
-| Course Reference | `05-Resources/Courses/[slug]/` | `type: course-reference`, `course` |
-| Quarterly Planning | `03-Reviews/Quarterly/` | `type: quarterly-planning`, `quarter`, `year`, `quests_planned` |
 
-> **Creating a course package:** `Ctrl+P` → "QuickAdd: New Course Package" — prompts for 5 inputs and creates the complete 5-file folder automatically. See [[05-Resources/Courses/Course Study Workflow|Course Study Workflow]] for the full process.
-
-**Frontmatter quoting:** All Templater `2026-06-05` expressions in frontmatter use single-quoted YAML strings (`date: '2026-06-05'`) to prevent Obsidian's Properties panel from trying to validate them before Templater runs.
+**Frontmatter quoting:** `focus_minutes:` and `steps:` must be bare integers, not quoted strings. `force-yaml-escape` is disabled in Linter to prevent this.
 
 ---
 
 ## Part 15: Vault maintenance routines
 
 ### Weekly (Sunday, during review — Section 8)
-- [ ] Process 5 oldest fleeting notes (Dataview queue in Section 8a)
-- [ ] Write ≥ 1 permanent note (Section 8b — if empty, write one before closing)
-- [ ] Check permanent notes created this week — each has ≥ 2 outbound links?
+- [ ] Process 5–10 oldest fleeting notes (Dataview queue in Section 8a)
+- [ ] Write ≥ 1 permanent note or fill ≥ 1 PN stub (Section 8b)
+- [ ] Verify permanent notes created this week have ≥ 2 outbound links
 - [ ] Update `progress:` in any quest where milestones completed
 - [ ] Fill `rating:` and `focus_minutes:` in this week's review frontmatter
 
 ### Monthly (first Sunday of each month — Vault State note)
 Open `_docs/Vault State - June 2026.md` and run the monthly health check:
 - [ ] **Orphan detector** — notes with zero backlinks. Link, move to `_reference/`, or delete.
-- [ ] **Fleeting inbox trend** — count with status indicator. Adjust weekly processing target if above 80.
+- [ ] **Fleeting inbox trend** — count with status indicator. Adjust weekly target if above 80.
 - [ ] **Permanent notes created this month** — check link health (≥ 2 outlinks, ≥ 1 inlink).
 - [ ] **MOC freshness** — any MOC not updated in 30+ days? Review and update.
-- [ ] Verify all weekly reviews this month have `rating:` and `focus_minutes:` filled.
+- [ ] Verify all weekly reviews have `rating:` and `focus_minutes:` filled.
 - [ ] Archive fleeting notes tagged `processed` to `_archive/Fleeting/`.
 
 ### Quarterly (end of quarter — Vault State note)
@@ -536,39 +509,46 @@ Open `_docs/Vault State - June 2026.md` and run the quarterly audit:
 - [ ] Graph view review — identify isolated permanent note clusters to link.
 
 ### Annual
-- [ ] Archive completed quests to `02-Quests/Archive/YYYY/`
-- [ ] Archive old daily notes to `04-Daily-Notes/Archive/YYYY/`
-- [ ] Archive old weekly/monthly reviews by year
+- [ ] Archive completed quests, daily notes, and old reviews by year
 - [ ] Open "All time" view in `vitals.base` — export for annual health checkup
-- [ ] Review all MOCs for accuracy
+- [ ] Review all MOCs for accuracy; prune stale links
 - [ ] Prune reading list of books you've decided not to read
 
 ---
 
-## Part 16: Dataview and Bases troubleshooting
+## Part 16: Attachment system
 
-| Symptom | Likely cause | Fix |
-|---|---|---|
-| Base shows empty table | Notes don't match the filter (wrong `status` or `type`) | Check frontmatter spelling; run Linter |
-| Dataview shows nothing | `type:` typo or notes in wrong folder | Check frontmatter; run `Dataview: Rebuild index` |
-| Focus hours Section 3 shows blank rows | `focus_minutes:` not filled in daily note frontmatter | Copy session total from focus log into frontmatter |
-| Focus bar shows 0% | Same as above — DataviewJS reads `focus_minutes` frontmatter field | Enter the total minutes in Properties panel |
-| Vitals base shows nothing | Linter converted numbers to quoted strings (`"2724"` instead of `2724`) | Settings → Linter → YAML Rules → Force YAML Escape → OFF |
-| Vitals averages tables empty | `bp_systolic > 0` filter — no BP readings yet | Add one BP reading, or change filter to a field you do track |
-| Weekly review Section 8a shows wrong notes | `file.ctime` sorts by creation time — system clock issue | Expected behavior; queue shows oldest-created-in-Obsidian |
-| Permanent notes not in Zettelkasten index | Missing `type: permanent` or note in wrong folder | Check Properties panel; confirm note is in `06-Zettelkasten/Permanent/` |
-| Base shows raw YAML | Bases core plugin disabled | Settings → Core plugins → Bases → ON |
-| Reviews not in dashboard bases | Wrong `type:` value | Must be exactly `weekly-review`, `monthly-review`, `quarterly-review` |
+`_attachments/` holds all binary files. The Attachment Catalog (`_attachments/Attachment Catalog.md`) tracks every file with a companion note.
+
+**Adding a new attachment:**
+1. Drag the file into Obsidian — it saves to `_attachments/` automatically
+2. Create a companion note using the Attachment Note Template
+3. Add a row to `_attachments/Attachment Catalog.md`
 
 ---
 
-## Part 17: Plugin troubleshooting
+## Part 17: Dataview and Bases troubleshooting
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| Base shows empty table | Notes don't match filter (wrong `status` or `type`) | Check frontmatter spelling; run Linter |
+| Dataview shows nothing | `type:` typo or notes in wrong folder | Check frontmatter; run `Dataview: Rebuild index` |
+| Focus hours Section 3 blank | `focus_minutes:` not filled in daily note frontmatter | Copy session total from focus log into frontmatter |
+| Focus bar shows 0% | Same as above — DataviewJS reads `focus_minutes` field | Enter total minutes in Properties panel |
+| Vitals base shows nothing | Linter quoted numbers (`"2724"` not `2724`) | Settings → Linter → YAML Rules → Force YAML Escape → **OFF** |
+| Vitals averages tables empty | `bp_systolic > 0` filter — no BP readings yet | Add one BP reading, or filter on a field you do track |
+| Permanent notes missing from index | Missing `type: permanent` or note in wrong folder | Check Properties panel; confirm folder is `06-Zettelkasten/Permanent/` |
+| Base shows raw YAML | Bases core plugin disabled | Settings → Core plugins → Bases → ON |
+| Reviews not in dashboard bases | Wrong `type:` value | Must be `weekly-review`, `monthly-review`, or `quarterly-review` exactly |
+
+---
+
+## Part 18: Plugin troubleshooting
 
 **Templates not firing on new note creation**
-Settings → Templater → confirm "Trigger Templater on new file creation" is ON. Verify folder templates show all 12 assignments. The template file must be in `_templates/` exactly.
+Settings → Templater → confirm "Trigger Templater on new file creation" is ON. Verify folder templates show all 12 assignments. Template file must be in `_templates/` exactly.
 
-**Periodic notes (weekly/monthly/quarterly) not creating**
-Settings → Periodic Notes → verify each type is enabled:
+**Periodic notes not creating**
 
 | Type | Format | Folder |
 |---|---|---|
@@ -584,7 +564,32 @@ Settings → QuickAdd → click the ⚡ lightning bolt icon next to each choice 
 Settings → Community plugins → verify `obsidian-advanced-uri` is enabled. Vault name in URLs must match exactly (Settings → About).
 
 **Commander buttons not showing**
-Three requirements must all be true: (1) entry `id` must be the Obsidian command ID (e.g. `periodic-notes:open-daily-note`), not a UUID; (2) entry must have `"mode": "any"`; (3) for Tab Bar buttons, Settings → Appearance → Show tab title bar must be ON. Toolbar (pageHeader) buttons work without the Appearance setting.
+Three requirements must all be true: (1) `id` field must be the Obsidian command ID (e.g. `periodic-notes:open-daily-note`), not a UUID; (2) entry must have `"mode": "any"`; (3) for Tab Bar buttons, Settings → Appearance → Show tab title bar must be ON. See `_docs/Commander — Quick Reference.md` for full details and the correct JSON format.
 
-**Linter breaking Templater syntax**
-Settings → Linter → General → Folders to Ig
+**Linter breaking frontmatter numbers**
+Settings → Linter → General → Folders to Ignore → add `_templates`. Also ensure Force YAML Escape is **OFF**.
+
+**Heatmap Calendar shows nothing**
+`focus_minutes:` must be a bare number > 0 in at least one daily note frontmatter.
+
+---
+
+## Part 19: Git backup
+
+**Remote:** `https://github.com/glpelletier-jpg/slip-box-vault.git` · Branch: `master`
+
+**Manual backup:** Run `_scripts/vault-backup.bat` (double-click in File Explorer or run from PowerShell). Commits with a timestamp and pushes to GitHub. Log saved to `C:\Vault\backup-log.txt`.
+
+**Scheduled backup:** Windows Task Scheduler runs the script hourly. See `_docs/Vault Backup System.md` for full setup instructions, OneDrive sync configuration, and recovery procedures.
+
+**Quick recovery:**
+| Scenario | Tool |
+|---|---|
+| Deleted a note today | `Ctrl+P` → "File recovery: Open file recovery" |
+| Deleted within 7 days | Obsidian File Recovery core plugin |
+| Any historical version | GitHub → browse file history |
+| Full vault restore | `git clone https://github.com/glpelletier-jpg/slip-box-vault.git "C:\Vault\Slip Box"` |
+
+---
+
+**Links:** [[00-Home/00-Home|Dashboard]] | [[_docs/Vault State - June 2026|Vault State]] | [[_docs/Commander — Quick Reference|Commander]] | [[_docs/Getting Started - First 30 Days|Getting Started]]

@@ -71,6 +71,6 @@ cssclasses: dashboard
 
 **Procedures:** [[_docs/Life Compass — Complete Procedure|Life Compass]] · [[_docs/Zettelkasten — Complete Procedure|Zettelkasten]] · [[_docs/Vault Systems — Complete Procedure|Vault Systems]] · [[_docs/Reviews & Planning — Complete Procedure|Reviews & Planning]] · [[_docs/Slip Box Master Guide|Master Guide]] · [[_docs/Vault Quick Reference|Quick Reference]]
 
-`v1.4.0` · [[_docs/Vault Version Log|Version Log]] · [[_docs/Vault State - June 2026|Vault State]]
+`v1.4.0` · [[_docs/Vault Version Log|Version Log]] · [[_docs/Vault State - June 2026|Vault State]] · ![[_reference/backup-status]]
 
 [Google Drive Index](<file:///C:/Users/guype/My Drive/Google Drive Index.md>)

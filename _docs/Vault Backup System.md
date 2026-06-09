@@ -1,6 +1,4 @@
 ---
-doc_type: guide
-purpose: "Git backup setup, vault-backup.bat usage, and remote repository details"
 title: Vault Backup System
 date: 2026-06-05
 tags: [vault-meta, backup, setup]
@@ -39,7 +37,7 @@ Download from [git-scm.com/download/win](https://git-scm.com/download/win) and i
 2. Click **+** → **New repository**
 3. Name: `slip-box-vault` · Visibility: **Private** · No README
 4. Click **Create repository**
-5. Copy the URL shown (e.g., `https://github.com/yourusername/slip-box-vault.git`)
+5. Copy the URL shown (e.g., `https://github.com/glpelletier-jpg/slip-box-vault.git`)
 
 **Step 3 — Initialize Git in the vault**
 Open **Command Prompt** (`Win+R` → `cmd`) and run these commands one at a time:
@@ -47,10 +45,10 @@ Open **Command Prompt** (`Win+R` → `cmd`) and run these commands one at a time
 ```
 cd "C:\Vault\Slip Box"
 git init
-git remote add origin https://github.com/yourusername/slip-box-vault.git
+git remote add origin https://github.com/glpelletier-jpg/slip-box-vault.git
 git add .
 git commit -m "Initial vault backup"
-git push -u origin main
+git push -u origin master
 ```
 
 When prompted, enter your GitHub username and password (or a Personal Access Token — GitHub will guide you).
@@ -143,7 +141,7 @@ For free mobile access: the Obsidian mobile app can open a vault stored in OneDr
 | Deleted or overwrote a note (today) | `Ctrl+P` → "File recovery: Open file recovery" |
 | Deleted a note (within 7 days) | File Recovery core plugin (above) |
 | Deleted or corrupted a note (any time) | GitHub → find the file in history → view/download old version |
-| Entire vault corrupted or deleted | `git clone https://github.com/yourusername/slip-box-vault.git "C:\Vault\Slip Box"` |
+| Entire vault corrupted or deleted | `git clone https://github.com/glpelletier-jpg/slip-box-vault.git "C:\Vault\Slip Box"` |
 | New laptop / reinstall | Install Git + Obsidian → clone repo → open vault in Obsidian |
 | OneDrive sync issue | Git is the backup — the truth is always in GitHub |
 
@@ -153,7 +151,7 @@ For free mobile access: the Obsidian mobile app can open a vault stored in OneDr
 
 **Verify Git is running:**
 1. Open `C:\Vault\backup-log.txt` — you should see recent timestamps
-2. Or go to `github.com/yourusername/slip-box-vault` — you should see recent commits
+2. Or go to `github.com/glpelletier-jpg/slip-box-vault` — you should see recent commits
 
 **Verify OneDrive is synced:**
 - OneDrive icon in taskbar should show a green checkmark (not a spinning icon)
@@ -172,64 +170,6 @@ The script in your vault does the following:
 5. Logs the result to `C:\Vault\backup-log.txt`
 
 You can run it manually any time by double-clicking it in File Explorer.
-
----
-
-## ZIP export for sharing / uploading to Claude
-
-> **Do not use Windows "Send to Compressed folder" or PowerShell `Compress-Archive` for vault ZIPs.**
->
-> Both write ZIP local-file headers in cp437 encoding. If your vault contains em dashes (`—`), smart quotes (`'`), or emoji in filenames, those characters become mojibake garbage (`#U0393#U00c7#U00f6` etc.) when extracted on Linux/macOS or uploaded to tools like Claude. Git is unaffected — this only matters for portable ZIPs.
-
-Use the Python export script instead:
-
-```bat
-REM From C:\Vault\ (or any directory — script locates itself)
-python "Slip Box\_scripts\vault-zip-export.py"
-```
-
-Output: `C:\Vault\Slip_Box_export_YYYY-MM-DD.zip`
-
-Custom output path:
-```bat
-python "Slip Box\_scripts\vault-zip-export.py" "D:\exports\my_vault.zip"
-```
-
-Python's `zipfile` module sets the UTF-8 flag in both the local and central directory ZIP headers (as required by the ZIP spec appendix D). This is the same flag that 7-Zip sets with `-mcu=on`. Nothing else in the Windows toolchain does this by default.
-
-**Why not 7-Zip?** 7-Zip works too (`7z a -tzip -mcu=on output.zip "Slip Box\"`), but requires a separate install. Python 3 is already required by some Obsidian plugins and is more likely to already be present.
-
----
-
-## One-button full backup (Commander + QuickAdd setup)
-
-The script `_scripts/vault-full-backup-qa.js` runs both the Git backup and ZIP export in sequence from a single Commander button or QuickAdd command. Set it up once:
-
-### Step 1 — Register the QuickAdd choice
-
-1. `Ctrl+P` → **QuickAdd: Manage Macros**
-2. Click **Add Choice** → type `Full Backup` → choose type **Macro** → **Add**
-3. Click the ⚙️ gear next to *Full Backup*
-4. Under **User Scripts**, click the folder icon → select `_scripts/vault-full-backup-qa.js`
-5. Click **Add** → save
-
-### Step 2 — Add a Commander button
-
-1. `Ctrl+P` → **Commander: Add command to Left Ribbon** (or Note Toolbar — your preference)
-2. Search for `QuickAdd: Full Backup` → select it
-3. Set icon: `archive` (or `cloud-upload`) · Label: `Full Backup`
-4. Save
-
-### What it does
-
-| Step | Action | Time |
-|---|---|---|
-| 1 | `vault-backup.bat` — git pull, add, commit, push | ~5–15 s |
-| 2 | `vault-zip-export.py` — UTF-8 ZIP to `C:\Vault\exports\` | ~10–30 s |
-
-ZIP filenames: `Slip_Box_export_YYYY-MM-DD.zip` in `C:\Vault\exports\`.
-
-If Git backup fails (no network, auth error, nothing to commit), the ZIP step is skipped and an error Notice is shown. Both steps log to `C:\Vault\backup-log.txt` via the `.bat`.
 
 ---
 

@@ -486,7 +486,8 @@
     "01-Vision": "title-desc",
     "00-Home": "title-asc",
     "06-Zettelkasten/Fleeting": "title-asc",
-    "_docs": "title-asc"
+    "_docs": "title-asc",
+    "_templates": "title-asc"
   },
   "folderTreeSortOverrides": {},
   "folderAppearances": {},

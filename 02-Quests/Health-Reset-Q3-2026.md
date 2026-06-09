@@ -9,6 +9,7 @@ tags:
   - quest
   - health
   - Q3-2026
+type: quest
 ---
 
 # Health Reset Q3 2026

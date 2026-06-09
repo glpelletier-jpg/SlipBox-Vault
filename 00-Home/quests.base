@@ -2,6 +2,7 @@ filters:
   and:
     - file.inFolder("02-Quests")
     - status != "Abandoned"
+    - file.name != "02-Quests"
 formulas:
   days_left: if(due, (date(due) - today()).days, "")
   on_track: if(progress >= 50 && days_left > 30, "On track", if(progress < 30 && days_left < 45, "At risk", "Check in"))

@@ -12,9 +12,9 @@
       "mode": "any"
     },
     {
-      "id": "periodic-notes:open-daily-note",
+      "id": "daily-notes",
       "icon": "lucide-calendar-days",
-      "name": "Open today's daily note (Periodic Notes)",
+      "name": "Open today's daily note",
       "mode": "any"
     },
     {
@@ -36,9 +36,9 @@
       "mode": "any"
     },
     {
-      "id": "quickadd:choice:f8f1ed6e-c47e-45c8-a9a3-21586683afc8",
+      "id": "quickadd:choice:c7f3a2e1-5d8b-4c9a-b041-3e6f1d0a7c84",
       "icon": "lucide-database-backup",
-      "name": "Full Backup",
+      "name": "Full backup",
       "mode": "any"
     }
   ],
@@ -65,9 +65,9 @@
       "mode": "any"
     },
     {
-      "id": "periodic-notes:open-daily-note",
+      "id": "daily-notes",
       "icon": "lucide-calendar-days",
-      "name": "Open today's daily note (Periodic Notes)",
+      "name": "Daily notes: Open today's daily note",
       "mode": "any"
     },
     {

@@ -12,7 +12,7 @@ filters:
   and:
     - file.inFolder("04-Daily-Notes")
     - file.name != "04-Daily-Notes"
-    - "!pulse.isEmpty()"
+    - pulse > 0
 formulas:
   date_label: if(date, date(date).format("ddd MMM D"), "")
   bp_display: if(bp_systolic > 0 && bp_diastolic > 0, bp_systolic + "/" + bp_diastolic, "")

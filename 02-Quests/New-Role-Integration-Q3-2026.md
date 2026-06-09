@@ -9,6 +9,7 @@ tags:
   - quest
   - work
   - Q3-2026
+type: quest
 ---
 
 # New Role Integration Q3 2026

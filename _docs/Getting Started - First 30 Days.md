@@ -1,9 +1,7 @@
 ---
-doc_type: guide
-purpose: "Onboarding guide — first-month habits, milestones, and what to set up in order"
 type: guide
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 tags: [guide, onboarding]
 ---
 
@@ -21,20 +19,20 @@ Before you start, here's what the vault contains and what's already working:
 
 **Structure:**
 - 8 numbered folders (00-Home through 07-Work-Knowledge) with folder notes and linked indexes
-- `_templates/` — 17 templates, all wired to auto-fire via Templater when you create notes in the right folders
+- `_templates/` — 18 templates, all wired to auto-fire via Templater when you create notes in the right folders
 - `_scripts/` — weekly and next-week calendar fetchers, plus maintenance scripts
-- `_attachments/` — 10 Rockwell PDF manuals with companion notes and a catalog
+- `_attachments/` — Rockwell PDF manuals with companion notes and a catalog
 
 **Knowledge base:**
-- `07-Work-Knowledge/` — 36 notes including a complete electrical fundamentals sequence (DC Theory → Current → Ohm's Law → Power → Sources & Loads) linked to both CAP exam prep and HAM Radio study
-- `06-Zettelkasten/Literature/` — 38 literature notes, 19 rebuilt to full template with proper structure
-- `06-Zettelkasten/Permanent/` — 6 permanent notes, all using claim-based kebab-case titles
-- `06-Zettelkasten/MOC/` — 4 Maps of Content: Automation Engineering, HAM Radio, PKM & Zettelkasten, Personal Growth
+- `07-Work-Knowledge/` — 38 notes including automation, networking, processes, troubleshooting, and CAP certification
+- `06-Zettelkasten/Literature/` — 49 literature notes (38 originals + 11 IA/OT reference stubs)
+- `06-Zettelkasten/Permanent/` — 28 permanent notes (6 originals + 22 IA/OT domain stubs across Instrumentation, PLC Architecture, OT Networking, Process Safety)
+- `06-Zettelkasten/MOC/` — 8 Maps of Content: Automation Engineering, HAM Radio, PKM & Zettelkasten, Personal Growth, Instrumentation, OT Networking, PLC Architecture, Process Safety
 - `05-Resources/Courses/HAM-Radio/` — complete General License study system: Master Reference, Syllabus, Study Resources
 
 **Reviews:**
-- 4 weekly reviews (W20–W23) fully updated with auto-pulling focus hours (Section 3) and Zettelkasten processing queue (Section 8)
-- Weekly Review Template Section 3 now pulls `focus_minutes` from your daily notes automatically — no manual tallying
+- 4 weekly reviews (W20–W23) fully updated with auto-pulling focus minutes (Section 3) and Zettelkasten processing queue (Section 8)
+- Weekly Review Template Section 3 pulls `focus_minutes` from your daily notes automatically — no manual tallying
 - Weekly Review Template Section 8 shows the 5 oldest fleeting notes for processing, permanent notes written this week, and a live inbox health meter
 
 **Maintenance:**
@@ -42,9 +40,9 @@ Before you start, here's what the vault contains and what's already working:
 
 **Known remaining work (from you):**
 - Fill in the blank fields in `01-Vision/life-compass.md` — 4 values sections + 3 role sections
-- Update `progress:` in quest notes (both currently at 0%)
-- Build the fleeting notes backlog down (150 notes — 5/week target via weekly review)
-- Update Periodic Notes plugin (v0.0.17 is behind — check Community Plugins)
+- Update `progress:` in quest notes (both currently early stage)
+- Build the fleeting notes backlog down (~150 notes — target 10/week via weekly review)
+- Fill in the 22 IA/OT permanent note stubs — each has a Claim and empty body sections; write 1 per week
 
 ---
 
@@ -73,7 +71,7 @@ Before you start, here's what the vault contains and what's already working:
   - *"Health is a multiplier, not a separate life category"*
   - *"Electrical resistance is friction — V=IR makes every circuit calculable"*
 
-  Write one paragraph. Link it to at least one other note (Life Compass, a quest, an existing permanent note). The Zettelkasten starts with a single note.
+  Write one paragraph. Link it to at least one other note (Life Compass, a quest, an existing permanent note). The Zettelkasten starts building density one note at a time.
 
 - [ ] **Check your HAM Radio study schedule** — `05-Resources/Courses/HAM-Radio/General License Syllabus.md` has the full week-by-week study plan. Week 1 starts Jun 8: G1 Commission's Rules. Set up your HamStudy.org account before Monday.
 
@@ -90,7 +88,7 @@ The vault earns its keep in the weekly review. Without it, data accumulates but 
 - [ ] **Section 7** — use `Ctrl+Shift+J` to pull next week's calendar for the intention section
 - [ ] **Section 8** — work through the 5 oldest fleeting notes in the Dataview queue. Decide each: promote to permanent / archive to literature / delete
 - [ ] **Copy overall rating** (1–5) to `rating:` frontmatter
-- [ ] **Update quest progress** — did the Health Reset habits get hit? Move `progress:` off 0% in the quest note if any movement happened
+- [ ] **Update quest progress** — did the Health Reset habits get hit? Move `progress:` in the quest note if any movement happened
 
 The first review will feel mechanical. By week 4 it will feel essential.
 
@@ -103,13 +101,13 @@ The first review will feel mechanical. By week 4 it will feel essential.
 - [ ] **Log focus sessions** — in the daily note's Focus Log section, log each work block in minutes:
   ```
   - [duration:: 90] HAM Radio study — G1 Commission's Rules
-  - [duration:: 60] Automation — reviewed Ohm's Law note
+  - [duration:: 60] Automation — reviewed a permanent note stub
   ```
   The `Total today:` line sums automatically. Copy to `focus_minutes:` at end of day.
 
 - [ ] **Add "Update quest progress" as a recurring Todoist task** — every Sunday, Personal project. The Health Reset dashboard health indicator stays red until you update `progress:` in the quest note.
 
-- [ ] **Review the Ohm's Law note** (`07-Work-Knowledge/Automation/Electrical Resistance and Ohm's Law.md`) — it covers the same physics as HAM Radio G5 sub-element (electrical principles) and CAP exam Domains 1 & 3. One study session serves both goals.
+- [ ] **Fill in a permanent note stub** — open any of the 22 IA/OT stubs in `06-Zettelkasten/Permanent/`. Each has a Claim already written. Write the Explanation, Evidence, Conditions, and Cross-links sections. One per week is the target.
 
 - [ ] **Second weekly review (Sunday)** — same process. This time check Section 3 — do the focus hours feel accurate? Are all your daily `focus_minutes:` values filled in?
 
@@ -117,7 +115,7 @@ The first review will feel mechanical. By week 4 it will feel essential.
 
 ## Week 3 — Zettelkasten activation
 
-- [ ] **Third weekly review** — by now the Section 8 Dataview queue is your main mechanism for reducing the 150-note backlog. Process 5, write 1 permanent note.
+- [ ] **Third weekly review** — by now the Section 8 Dataview queue is your main mechanism for reducing the 150-note backlog. Process 10, write 1 permanent note.
 
 - [ ] **Look at the daily-focus base** — open `00-Home/daily-focus.base` on "Last 7 days" view. Your `focus_intention:` and `end_of_day:` entries from the past two weeks are there. Is there a gap between what you intended each day and what happened? That gap is data. It becomes a permanent note.
 
@@ -125,7 +123,7 @@ The first review will feel mechanical. By week 4 it will feel essential.
 
 - [ ] **Install Obsidian Web Clipper** (browser extension) — the Articles folder and template are ready. The Web Clipper fills the Article template from any webpage in one click. Feeds `05-Resources/Articles/` without friction.
 
-- [ ] **Check the Automation Engineering MOC** (`06-Zettelkasten/MOC/Automation Engineering MOC.md`) — it now has a complete Electrical Fundamentals section with the full sequence linked. If you've been reading any of those notes, add a reaction or question to the MOC's "Core tensions" section.
+- [ ] **Check the Automation Engineering MOC** (`06-Zettelkasten/MOC/Automation Engineering MOC.md`) — review the full structure including Electrical Fundamentals and IA/OT linked stubs. If you've been reading automation material, add a reaction or question to the MOC's "Core tensions" section.
 
 ---
 
@@ -135,7 +133,7 @@ The first review will feel mechanical. By week 4 it will feel essential.
 
 - [ ] **Compare Life Compass energy audit** — open `01-Vision/life-compass.md` and re-rate the 6 life areas. Compare to your Week 1 baseline. Has Health & energy moved since starting the Health Reset quest?
 
-- [ ] **Write a second permanent note from the daily-focus data** — you have ~3 weeks of `focus_intention:` / `end_of_day:` pairs. Look at the base. What pattern do you see? There's a permanent note in there about how you actually work vs. how you intend to work.
+- [ ] **Write a permanent note from the daily-focus data** — you have ~3 weeks of `focus_intention:` / `end_of_day:` pairs. Look at the base. What pattern do you see? There's a permanent note in there about how you actually work vs. how you intend to work.
 
 - [ ] **Review the HAM Radio MOC** (`06-Zettelkasten/MOC/HAM Radio MOC.md`) — it cross-references the Automation MOC on electrical fundamentals. If you've been studying both, add a note about what overlapped and what surprised you.
 
@@ -187,12 +185,12 @@ Every tool in this vault — the quests, the vitals, the focus hours progress ba
 
 Don't think about these now. Come back after your first monthly review.
 
-- **HAM Radio electronics notes** — your Future Vision and HAM Radio MOC both point here. After the General License exam in August, the study notes convert into permanent Zettelkasten notes naturally.
-- **CAP exam prep cluster** — `07-Work-Knowledge/CAP-Certification/` has the roadmap. Target Q3 2027. The electrical fundamentals notes already cover Domains 1 and 3.
+- **HAM Radio electronics notes** — your Future Vision and HAM Radio MOC both point here. After the General License exam, the study notes convert into permanent Zettelkasten notes naturally.
+- **CAP exam prep cluster** — `07-Work-Knowledge/CAP-Certification/` has the roadmap. The electrical fundamentals notes already cover Domains 1 and 3.
 - **Second quest for Q4** — Health Reset is the right single focus for Q3. If it's going well by September, the quarterly planning session is the right time to think about a second 90-day arc.
-- **Grow the permanent note network** — by month 2 you should have 8–10 permanent notes. That's when the linking discipline starts to feel like thinking rather than filing.
-- **Life Compass completion** — the 4 blank values sections and 3 role sections. These inform every future quest. Complete before Q4 planning.
+- **Grow the permanent note network** — 28 stubs exist; the target is 50 fully written permanent notes by Q3 end. That's where linking starts to feel like thinking rather than filing.
+- **Life Compass completion** — the blank values sections and role sections. These inform every future quest. Complete before Q4 planning.
 
 ---
 
-**Links:** [[00-Home/00-Home|Dashboard]] | [[_docs/Slip Box Master Guide|Master Guide]] | [[_docs/Slip Box Integrated Workflow|Integrated Workflow]] | [[01-Vision/life-compass|Life Compass]] | [[02-Quests/Health-Reset-Q3-2026|Health Reset Quest]]
+**Links:** [[00-Home/00-Home|Dashboard]] | [[_docs/Slip Box Master Guide|Master Guide]] | [[01-Vision/life-compass|Life Compass]] | [[02-Quests/Health-Reset-Q3-2026|Health Reset Quest]]

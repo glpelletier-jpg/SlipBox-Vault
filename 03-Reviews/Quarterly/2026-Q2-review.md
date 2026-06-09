@@ -34,7 +34,7 @@ Read back through:
 TABLE WITHOUT ID
   link(file.path, week) AS Week,
   rating AS "Rating /5",
-  focus_hours AS "Focus hrs"
+  focus_minutes AS "Focus (min)"
 FROM "03-Reviews/Weekly"
 WHERE type = "weekly-review" AND date >= date(2026-04-01) AND date < date(2026-07-01)
 SORT date ASC
@@ -48,7 +48,7 @@ SORT date ASC
 | Quests completed | | | |
 | Books finished | | | |
 
-*(Copy focus_hours_total and quest counts into frontmatter above.)*
+*(Copy focus_minutes_total and quest counts into frontmatter above.)*
 
 ---
 

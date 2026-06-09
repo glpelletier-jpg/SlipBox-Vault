@@ -9,7 +9,6 @@ formulas:
   week_num: if(date, date(date).format("YYYY-[W]WW"), "")
   duration_display: if(focus_minutes > 0, ((focus_minutes - focus_minutes % 60) / 60) + "h " + (focus_minutes % 60) + "m", "")
   weekly_total: if(focus_minutes > 0, focus_minutes, 0)
-  Untitled: ""
 properties:
   formula.day_name:
     displayName: Day
@@ -27,7 +26,6 @@ views:
       - formula.duration_display
       - focus_minutes
       - formula.week_num
-      - formula.Untitled
     sort:
       - property: formula.day_name
         direction: DESC

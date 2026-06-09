@@ -9,8 +9,6 @@ formulas:
   min_vs_goal: if(focus_minutes, (focus_minutes / 1200 * 100).round(0) + "%", "—")
   week_label: if(week, week, if(date, date(date).format("MMM D, YYYY"), ""))
   rating_stars: if(rating, "★".repeat(rating) + "☆".repeat(5 - rating), "—")
-  current_q_start: date(date(now()).format("YYYY") + "-" + if(date(now()).month <= 3, "01-01", if(date(now()).month <= 6, "04-01", if(date(now()).month <= 9, "07-01", "10-01"))))
-  in_current_quarter: date(date) >= formula.current_q_start
 properties:
   note.date:
     displayName: Week of
@@ -33,6 +31,8 @@ views:
     sort:
       - property: date
         direction: DESC
+    columnSize:
+      formula.rating_stars: 116
   - type: table
     name: This quarter
     filters:

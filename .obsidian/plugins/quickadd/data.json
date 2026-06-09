@@ -233,10 +233,11 @@
         "name": "Vault Backup",
         "commands": [
           {
-            "id": "e5f9c2a3-0d4b-4e8f-c673-2a5b1f9d3e06",
+            "name": "vault-full-backup-qa",
             "type": "UserScript",
-            "name": "vault_backup_qa",
-            "path": "_scripts/vault_backup_qa.js"
+            "id": "21e565c8-00d5-4048-8114-ead64eb244c7",
+            "path": "_scripts/vault-full-backup-qa.js",
+            "settings": {}
           }
         ]
       }
@@ -256,55 +257,6 @@
             "type": "UserScript",
             "id": "91f26974-65c7-453a-b835-f225d40d68d0",
             "path": "_scripts/fleeting-triage.js",
-            "settings": {}
-          }
-        ]
-      }
-    },
-    {
-      "id": "320da96b-10f6-429a-a884-eb8423a9a8cc",
-      "name": "Update Focus Minutes",
-      "type": "Template",
-      "command": true,
-      "templatePath": "_templates/Update Focus Minutes.md",
-      "fileNameFormat": {
-        "enabled": false,
-        "format": ""
-      },
-      "folder": {
-        "enabled": false,
-        "folders": [],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": false
-      },
-      "appendLink": false,
-      "openFile": false,
-      "fileOpening": {
-        "location": "tab",
-        "direction": "vertical",
-        "mode": "default",
-        "focus": true
-      },
-      "fileExistsBehavior": {
-        "kind": "prompt"
-      }
-    },
-    {
-      "id": "f8f1ed6e-c47e-45c8-a9a3-21586683afc8",
-      "name": "Full backup",
-      "type": "Macro",
-      "command": true,
-      "runOnStartup": false,
-      "macro": {
-        "name": "Full backup",
-        "id": "470ce73b-b6da-472f-9717-e9597edc0273",
-        "commands": [
-          {
-            "name": "vault-full-backup-qa",
-            "type": "UserScript",
-            "id": "ab99ae94-9b93-48d2-9781-370b12018779",
-            "path": "_scripts/vault-full-backup-qa.js",
             "settings": {}
           }
         ]

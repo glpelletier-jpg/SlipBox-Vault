@@ -67,3 +67,14 @@ if errorlevel 1 (
 )
 
 echo Backup finished: %DATE% %TIME% >> %LOG%
+
+REM ── Write backup status to vault dashboard ──────────────────────────────────
+set STATUS_FILE="%VAULT%\_reference\backup-status.md"
+echo ---                                   > %STATUS_FILE%
+echo tags: [vault-meta]                   >> %STATUS_FILE%
+echo dataview-ignore: true                >> %STATUS_FILE%
+echo ---                                  >> %STATUS_FILE%
+echo.                                     >> %STATUS_FILE%
+echo **Last backup:** %DATE% %TIME%       >> %STATUS_FILE%
+echo **Branch:** %BRANCH%                 >> %STATUS_FILE%
+echo **Vault:** v%VERSION%                >> %STATUS_FILE%
