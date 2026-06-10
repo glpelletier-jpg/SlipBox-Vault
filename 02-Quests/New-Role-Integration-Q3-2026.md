@@ -92,4 +92,49 @@ Quest created. Started at Argenta May 27 — one week in. Still in full orientat
 
 ---
 
+## Knowledge connections (Zettelkasten)
+
+*Permanent notes that reinforce this quest — each claim is a principle worth applying on the job.*
+
+### Instrumentation & field devices
+
+- [[06-Zettelkasten/Permanent/PN — 4–20 mA loops provide live-zero detection — a 0 mA signal indicates a wire break, not zero process value|PN — 4–20 mA loops]]
+- [[06-Zettelkasten/Permanent/PN — HART superimposes 1200-2200 Hz FSK digital signal on the 4–20 mA loop without disrupting analog output|PN — HART]]
+- [[06-Zettelkasten/Permanent/PN — IO-Link is a point-to-point digital protocol replacing discrete and analog signals with parameterizable smart I-O|PN — IO-Link]]
+- [[06-Zettelkasten/Permanent/PN — Pepperl+Fuchs isolators galvanically decouple field devices from control system to prevent ground loops|PN — P+F isolators]]
+- [[06-Zettelkasten/Permanent/PN — Endress+Hauser Heartbeat Technology provides continuous self-monitoring and on-demand verification without process interruption|PN — E+H Heartbeat]]
+- [[06-Zettelkasten/Permanent/PN — SIL-rated transmitters require documented proof-test procedures to maintain PFDavg over the safety lifecycle|PN — SIL-rated transmitters]]
+
+### PLC architecture & programming
+
+- [[06-Zettelkasten/Permanent/PN — Allen-Bradley Studio 5000 AOIs encapsulate reusable logic with local tags and parameters|PN — AOIs]]
+- [[06-Zettelkasten/Permanent/PN — Tag-based addressing in ControlLogix eliminates I-O slot dependency of legacy fixed-address PLCs|PN — Tag-based addressing]]
+- [[06-Zettelkasten/Permanent/PN — UDTs enforce consistent data structures across AOIs and HMI faceplates|PN — UDTs]]
+- [[06-Zettelkasten/Permanent/PN — Produced-consumed tags in Logix enable peer-to-peer data sharing over EtherNet-IP without explicit messaging|PN — Produced-consumed tags]]
+- [[06-Zettelkasten/Permanent/PN — PLC scan cycle determines worst-case response time for safety-critical outputs|PN — Scan cycle]]
+- [[06-Zettelkasten/Permanent/PN — IEC 61131-3 defines five standard languages — LD, FBD, ST, IL, SFC — for portability across vendors|PN — IEC 61131-3]]
+- [[06-Zettelkasten/Permanent/PN — Siemens TIA Portal uses OB-FB-FC hierarchy for modular program organization|PN — TIA Portal OB-FB-FC]]
+
+### OT networking & security
+
+- [[06-Zettelkasten/Permanent/PN — EtherNet-IP uses CIP over standard TCP-UDP — implicit messaging for I-O, explicit for configuration|PN — EtherNet/IP uses CIP]]
+- [[06-Zettelkasten/Permanent/PN — Purdue model zones define trust boundaries — cross-zone traffic requires explicit firewall rules|PN — Purdue model]]
+- [[06-Zettelkasten/Permanent/PN — A DMZ between Level 3 and Level 4 prevents direct IT-to-OT routed connections|PN — DMZ L3–L4]]
+- [[06-Zettelkasten/Permanent/PN — NIST 800-82 Rev 3 extends ICS guidance to cloud-connected and remote-access scenarios|PN — NIST 800-82]]
+- [[06-Zettelkasten/Permanent/PN — Unmanaged switches in OT environments eliminate VLAN segmentation and span tree visibility|PN — Unmanaged switches]]
+- [[06-Zettelkasten/Permanent/PN — PROFINET uses standard Ethernet but requires managed switches with QoS and IGMP snooping|PN — PROFINET]]
+- [[06-Zettelkasten/Permanent/PN — Device-level firewalls on Logix controllers (CIP Security) are available from firmware v33 onward|PN — CIP Security]]
+
+### Process safety (IEC 61511 / SIS)
+
+- [[06-Zettelkasten/Permanent/PN — IEC 61511 safety lifecycle has 16 phases from hazard analysis through decommissioning|PN — IEC 61511 lifecycle]]
+- [[06-Zettelkasten/Permanent/PN — SIL is a discrete risk-reduction target, not a product rating — it applies to a SIF, not a device|PN — SIL definition]]
+- [[06-Zettelkasten/Permanent/PN — SIS must be functionally and physically separated from BPCS to prevent common cause failures|PN — SIS separation]]
+- [[06-Zettelkasten/Permanent/PN — Dangerous Detected vs Dangerous Undetected failures drive SFF calculation and architecture requirements|PN — DD vs DU failures]]
+- [[06-Zettelkasten/Permanent/PN — LOPA quantifies risk reduction by multiplying IPL failure probabilities along a demand scenario|PN — LOPA]]
+- [[06-Zettelkasten/Permanent/PN — PFDavg must be verified over the proof-test interval — testing too infrequently inflates actual PFD|PN — PFDavg]]
+- [[06-Zettelkasten/Permanent/PN — 61511 Clause 11.9 requires prior-use justification for devices not certified to IEC 61508|PN — Clause 11.9 prior-use]]
+
+---
+
 **Links:** [[01-Vision/life-compass|Life Compass]] | [[01-Vision/future-vision|Future Vision]] | [[02-Quests/Health-Reset-Q3-2026|Health Reset Q3]]

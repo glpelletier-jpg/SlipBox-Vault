@@ -389,3 +389,8 @@ Knowledge - Automation systems and documentation - Management of change procedur
 
 Skills - Configuration management practices - Version control
 
+---
+
+**Permanent notes:** [[06-Zettelkasten/Permanent/PN — IEC 61511 safety lifecycle has 16 phases from hazard analysis through decommissioning|PN — IEC 61511 lifecycle]] | [[06-Zettelkasten/Permanent/PN — SIL is a discrete risk-reduction target, not a product rating — it applies to a SIF, not a device|PN — SIL definition]] | [[06-Zettelkasten/Permanent/PN — SIS must be functionally and physically separated from BPCS to prevent common cause failures|PN — SIS separation]] | [[06-Zettelkasten/Permanent/PN — IEC 61131-3 defines five standard languages — LD, FBD, ST, IL, SFC — for portability across vendors|PN — IEC 61131-3]] | [[06-Zettelkasten/Permanent/PN — EtherNet-IP uses CIP over standard TCP-UDP — implicit messaging for I-O, explicit for configuration|PN — EtherNet/IP uses CIP]]
+
+**Links:** [[07-Work-Knowledge/07-Work-Knowledge|Work Knowledge]] | [[06-Zettelkasten/MOC/Automation Engineering MOC|Automation MOC]]

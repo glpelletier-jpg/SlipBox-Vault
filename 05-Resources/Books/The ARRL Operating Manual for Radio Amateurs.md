@@ -35,7 +35,7 @@ tags: [book]
 
 ## Linked notes
 
-**Literature note:** [[06-Zettelkasten/Literature/The ARRL Operating Manual for Radio Amateurs|Literature note]]
+**Literature note:** [[06-Zettelkasten/Literature/The ARRL Operating Manual for Radio Amateurs; Volume 1 and 2|Literature note]]
 
 ---
 

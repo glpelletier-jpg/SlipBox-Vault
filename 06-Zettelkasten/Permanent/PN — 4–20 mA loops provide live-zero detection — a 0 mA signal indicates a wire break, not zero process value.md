@@ -34,10 +34,16 @@ cap_domain: ""
 
 ## Cross-links
 ### Supports
-- [[PN — ]]
+- *(link permanent notes here)*
 
 ### See also
-- [[PN — ]]
+- *(link permanent notes here)*
+
+### Source material
+- [[07-Work-Knowledge/Automation/Instruments in Automation|Instruments in Automation (WK)]]
+
+### Applied in
+- [[02-Quests/New-Role-Integration-Q3-2026|New Role Integration Q3]]
 
 ---
 

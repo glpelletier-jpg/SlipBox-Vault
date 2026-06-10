@@ -54,3 +54,8 @@ Among CIP technology professionals, there is an unofficial way to classify CIP d
 
 And that’s really all there is to this important technology. This is the elegance and simplicity of CIP. It can be explained very simply, implemented easily, and operated reliably and efficiently.
 
+---
+
+**Permanent notes:** [[06-Zettelkasten/Permanent/PN — EtherNet-IP uses CIP over standard TCP-UDP — implicit messaging for I-O, explicit for configuration|PN — EtherNet/IP uses CIP]] | [[06-Zettelkasten/Permanent/PN — Produced-consumed tags in Logix enable peer-to-peer data sharing over EtherNet-IP without explicit messaging|PN — Produced-consumed tags]] | [[06-Zettelkasten/Permanent/PN — Device-level firewalls on Logix controllers (CIP Security) are available from firmware v33 onward|PN — CIP Security firewalls]]
+
+**Links:** [[07-Work-Knowledge/07-Work-Knowledge|Work Knowledge]] | [[06-Zettelkasten/MOC/Automation Engineering MOC|Automation MOC]]

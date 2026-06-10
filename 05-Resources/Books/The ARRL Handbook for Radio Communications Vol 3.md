@@ -35,7 +35,7 @@ tags: [book]
 
 ## Linked notes
 
-**Literature note:** [[06-Zettelkasten/Literature/The ARRL Handbook for Radio Communications Vol 3|Literature note]]
+**Literature note:** [[06-Zettelkasten/Literature/The ARRL Handbook for Radio Communications 100th Edition; Volume 3|Literature note]]
 
 ---
 

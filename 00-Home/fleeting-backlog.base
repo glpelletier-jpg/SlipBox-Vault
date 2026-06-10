@@ -1,0 +1,39 @@
+filters:
+  and:
+    - file.inFolder("06-Zettelkasten/Fleeting")
+    - type == "fleeting"
+formulas:
+  age_days: if(date, (today() - date(date)).days, "")
+  age_label: if(date, date(date).format("MMM D, YYYY"), "")
+  urgency: if(age_days > 60, "🔴 Old", if(age_days > 30, "🟡 Aging", "🟢 Fresh"))
+properties:
+  note.title:
+    displayName: Title
+  formula.age_label:
+    displayName: Captured
+  formula.age_days:
+    displayName: Days old
+  formula.urgency:
+    displayName: Status
+views:
+  - type: table
+    name: Backlog (oldest first)
+    order:
+      - title
+      - formula.age_label
+      - formula.age_days
+      - formula.urgency
+    sort:
+      - property: date
+        direction: ASC
+    limit: 20
+  - type: table
+    name: Oldest 10
+    order:
+      - title
+      - formula.age_label
+      - formula.urgency
+    sort:
+      - property: date
+        direction: ASC
+    limit: 10

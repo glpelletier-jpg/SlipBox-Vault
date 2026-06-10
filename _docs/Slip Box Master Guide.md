@@ -9,6 +9,44 @@ updated: 2026-06-08
 
 ---
 
+## Table of Contents
+
+- [[#Part 1 What this vault is|Part 1: What this vault is]]
+  - [[#The five core questions]]
+- [[#Part 2 Vault structure|Part 2: Vault structure]]
+  - [[#Files in 00-Home]]
+  - [[#Files in _docs]]
+- [[#Part 3 Three-tool system|Part 3: Three-tool system]]
+  - [[#Connection points]]
+  - [[#Todoist quick links]]
+  - [[#Capture routing]]
+  - [[#Calendar scripts]]
+- [[#Part 4 Plugin reference|Part 4: Plugin reference]]
+  - [[#Community plugins 15 installed|Community plugins]]
+  - [[#Core plugins must stay enabled|Core plugins]]
+- [[#Part 5 Hotkey reference|Part 5: Hotkey reference]]
+- [[#Part 6 Daily workflow|Part 6: Daily workflow]]
+  - [[#Morning 15 minutes|Morning (15 min)]]
+  - [[#Logging focus sessions]]
+  - [[#End of day 8 minutes|End of day (8 min)]]
+- [[#Part 7 Weekly workflow — Sunday ~50 minutes|Part 7: Weekly workflow]]
+- [[#Part 8 Monthly workflow — end of month ~30–45 min|Part 8: Monthly workflow]]
+- [[#Part 9 Quarterly workflow — end of quarter ~2–3 hours|Part 9: Quarterly workflow]]
+- [[#Part 10 Quests|Part 10: Quests]]
+- [[#Part 11 Vision documents|Part 11: Vision documents]]
+- [[#Part 12 Zettelkasten — the thinking layer|Part 12: Zettelkasten]]
+  - [[#The four note types]]
+  - [[#Zettelkasten processing workflow]]
+- [[#Part 13 Work Knowledge base|Part 13: Work Knowledge base]]
+- [[#Part 14 Template reference|Part 14: Template reference]]
+- [[#Part 15 Vault maintenance routines|Part 15: Vault maintenance routines]]
+- [[#Part 16 Attachment system|Part 16: Attachment system]]
+- [[#Part 17 Dataview and Bases troubleshooting|Part 17: Dataview & Bases troubleshooting]]
+- [[#Part 18 Plugin troubleshooting|Part 18: Plugin troubleshooting]]
+- [[#Part 19 Git backup|Part 19: Git backup]]
+
+---
+
 ## Part 1: What this vault is
 
 The Slip Box is a personal operating system built around three tools — **Obsidian** (knowledge, reflection, reviews), **Todoist** (task management), and **Morgen Calendar** (scheduling). Each tool has a distinct lane; overlap is where friction comes from.

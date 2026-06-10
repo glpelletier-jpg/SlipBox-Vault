@@ -192,3 +192,8 @@ This section from pages 901 to 930 of the document covers the significance of an
 
 This summary from pages 931 to 960 focuses on troubleshooting techniques for current loops, the function and utility of pneumatic instrumentation, principles underlying self-balancing mechanisms, and advances in pilot valves, encapsulating the essence of analog electronic and pneumatic instrumentation as covered in this section of the text. -
 
+---
+
+**Permanent notes:** [[06-Zettelkasten/Permanent/PN — 4–20 mA loops provide live-zero detection — a 0 mA signal indicates a wire break, not zero process value|PN — 4–20 mA loops]] | [[06-Zettelkasten/Permanent/PN — HART superimposes 1200-2200 Hz FSK digital signal on the 4–20 mA loop without disrupting analog output|PN — HART]] | [[06-Zettelkasten/Permanent/PN — Pepperl+Fuchs isolators galvanically decouple field devices from control system to prevent ground loops|PN — P+F isolators]] | [[06-Zettelkasten/Permanent/PN — Endress+Hauser Heartbeat Technology provides continuous self-monitoring and on-demand verification without process interruption|PN — E+H Heartbeat]] | [[06-Zettelkasten/Permanent/PN — SIL-rated transmitters require documented proof-test procedures to maintain PFDavg over the safety lifecycle|PN — SIL-rated transmitters]]
+
+**Links:** [[07-Work-Knowledge/07-Work-Knowledge|Work Knowledge]] | [[06-Zettelkasten/MOC/Automation Engineering MOC|Automation MOC]]

@@ -40,6 +40,12 @@
       "icon": "lucide-database-backup",
       "name": "Full backup",
       "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:a3297057-51bc-44ab-a158-4d9b9b1d5b0b",
+      "icon": "lucide-clipboard",
+      "name": "Work Note",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],

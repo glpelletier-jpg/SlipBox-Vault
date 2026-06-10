@@ -44,3 +44,6 @@ Personal heuristic: *let the cream rise to the top before you take a sip* — wa
 - [[06-Zettelkasten/Literature/Atomic Habits]] — habits that survive are usually worth keeping
 - Knowledge work output should build on itself rather than disappear — building on old ideas is a Lindy bet
 - [[06-Zettelkasten/MOC/Personal Growth MOC]]
+
+### Applied in
+- [[02-Quests/Health-Reset-Q3-2026|Health Reset Q3]]

@@ -1,0 +1,37 @@
+filters:
+  and:
+    - file.inFolder("_reference/Work")
+    - or:
+        - type == "argenta-person"
+        - type == "argenta-system"
+        - type == "argenta-equipment"
+        - type == "argenta-location"
+formulas:
+  type_label: if(type == "argenta-person", "👤 Person", if(type == "argenta-system", "🖥 System", if(type == "argenta-equipment", "⚙️ Equipment", if(type == "argenta-location", "📍 Location", type))))
+  modified_label: file.mtime.format("MMM D")
+properties:
+  note.name:
+    displayName: Name
+  formula.type_label:
+    displayName: Type
+  note.status:
+    displayName: Status
+  formula.modified_label:
+    displayName: Modified
+views:
+  - type: table
+    name: Recently updated
+    order:
+      - name
+      - formula.type_label
+      - note.status
+      - formula.modified_label
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 10
+  - type: cards
+    name: By type
+    order:
+      - name
+      - formula.type_label

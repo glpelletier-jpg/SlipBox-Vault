@@ -44,6 +44,7 @@ tags: [vault-meta]
 
 | Document | Date | Summary |
 |---|---|---|
-| [[_docs/Evaluations/Vault Evaluation 14 - June 2026\|Vault Evaluation 14]] | Jun 8, 2026 | **Latest** — 28 PN stubs + 11 LIT stubs · Dataview focus_minutes fix · MOC link sanitization |
+| [[_docs/Evaluations/Vault Evaluation 9 - June 2026\|Vault Evaluation 9]] | Jun 9, 2026 | **Latest** — Course structure audit · quarterly-reviews.base gap · Reviews & Planning broken link · HAM Radio W1 progress |
+| [[_docs/Evaluations/Vault Evaluation 14 - June 2026\|Vault Evaluation 14]] | Jun 8, 2026 | 28 PN stubs + 11 LIT stubs · Dataview focus_minutes fix · MOC link sanitization |
 | [[_docs/Evaluations/Vault Evaluation 7 - June 2026\|Vault Evaluation 7]] | Jun 5, 2026 | Daily schedule integration · permanent note naming · script cleanup |
 | [[_docs/Evaluations/Vault Evaluation 6 - June 2026\|Vault Eva

@@ -6,7 +6,7 @@ cssclasses: dashboard
 
 > Your single source of truth. Start here every day.
 
-[[_docs/Vault Quick Reference|⌨️ Quick Reference]]
+[[_docs/Commander — Quick Reference|⌨️ Quick Reference]]
 
 ---
 
@@ -40,11 +40,31 @@ cssclasses: dashboard
 
 ---
 
+## Fleeting backlog
+
+![[00-Home/fleeting-backlog.base]]
+
+---
+
+## Troubleshooting logs
+
+![[00-Home/troubleshooting-recent.base]]
+
+---
+
+## Work reference — recent activity
+
+![[00-Home/work-reference-activity.base]]
+
+---
+
 ## Reviews
 
 ![[00-Home/weekly-reviews.base]]
 
 ![[00-Home/monthly-reviews.base]]
+
+![[00-Home/quarterly-reviews.base]]
 
 ## Planning Diagnosis
 
@@ -65,11 +85,12 @@ cssclasses: dashboard
 | Resources      | [[05-Resources/05-Resources]]                  | 05-Resources          |
 | Zettelkasten   | [[06-Zettelkasten/06-Zettelkasten]]            | 06-Zettelkasten       |
 | Work Knowledge | [[07-Work-Knowledge/07-Work-Knowledge]]        | 07-Work-Knowledge     |
+| Work Notes     | [[08-Work-Notes/08-Work-Notes]]               | 08-Work-Notes         |
 | Attachments    | [[_attachments/Attachment Catalog]]            | Attachment Catalog    |
 
 ---
 
-**Procedures:** [[_docs/Life Compass — Complete Procedure|Life Compass]] · [[_docs/Zettelkasten — Complete Procedure|Zettelkasten]] · [[_docs/Vault Systems — Complete Procedure|Vault Systems]] · [[_docs/Reviews & Planning — Complete Procedure|Reviews & Planning]] · [[_docs/Slip Box Master Guide|Master Guide]] · [[_docs/Vault Quick Reference|Quick Reference]]
+**Procedures:** [[_docs/Life Compass — Complete Procedure|Life Compass]] · [[_docs/Zettelkasten — Complete Procedure|Zettelkasten]] · [[_docs/Vault Systems — Complete Procedure|Vault Systems]] · [[_docs/Reviews & Planning — Complete Procedure|Reviews & Planning]] · [[_docs/Slip Box Master Guide|Master Guide]] · [[_docs/Commander — Quick Reference|Quick Reference]]
 
 `v1.4.0` · [[_docs/Vault Version Log|Version Log]] · [[_docs/Vault State - June 2026|Vault State]] · ![[_reference/backup-status]]
 

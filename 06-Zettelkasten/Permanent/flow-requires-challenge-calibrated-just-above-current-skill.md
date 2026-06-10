@@ -47,3 +47,6 @@ The challenge-skill axis also explains why expertise *enables* flow more readily
 - [[06-Zettelkasten/Literature/The Complete Guide to Deep Work]] — Newport's deep work requires the same calibration
 - [[06-Zettelkasten/Literature/Feel Good Productivity - Ali Abdaal]] — Abdaal's "challenge" lever maps directly
 - [[06-Zettelkasten/MOC/Personal Growth MOC]]
+
+### Applied in
+- [[02-Quests/Health-Reset-Q3-2026|Health Reset Q3]]

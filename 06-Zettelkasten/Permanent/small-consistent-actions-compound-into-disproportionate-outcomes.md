@@ -45,3 +45,6 @@ Personal application: The Zettelkasten itself is a compounding system. The first
 - Longevity is stronger evidence of future value than novelty — Lindy Effect is compounding applied to survival
 - [[06-Zettelkasten/Literature/Atomic Habits]] — Clear's entire framework is built on this principle
 - [[06-Zettelkasten/MOC/Personal Growth MOC]]
+
+### Applied in
+- [[02-Quests/Health-Reset-Q3-2026|Health Reset Q3]]

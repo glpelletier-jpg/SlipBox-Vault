@@ -224,6 +224,38 @@ SORT progress DESC
 
 ---
 
+## 8b. Course study check-in
+
+*5 minutes — log sessions, extract any permanent note claims, flag weak areas.*
+
+### HAM Radio
+
+```dataview
+LIST WITHOUT ID
+  "Week " + week + " · " + dateformat(date, "MMM D") + " sessions logged"
+FROM "05-Resources/Courses/HAM-Radio"
+WHERE type = "course-progress" AND date >= date(this.date) - dur(7 days)
+```
+
+- [ ] Log this week's study sessions in [[05-Resources/Courses/HAM-Radio/HAM Radio General License — Progress|HAM Progress tracker]] (`[duration:: N]` inline field)
+- [ ] Take one practice exam if you haven't this week → log score with `[score:: N%]`
+- [ ] Add any concepts still fuzzy to the **Weak areas** list in the Progress tracker
+- [ ] Any insight worth a permanent note? → `Ctrl+Shift+P` → tag `domain: ham-radio`
+
+**HAM Radio PNs written this week:**
+-
+
+### CAP Certification
+
+- [ ] Log study sessions in [[07-Work-Knowledge/CAP-Certification/CAP Study Plan|CAP Study Plan]] progress log
+- [ ] Add wrong/uncertain practice questions to [[07-Work-Knowledge/CAP-Certification/CAP Practice Questions|CAP Practice Questions]] log
+- [ ] Any insight worth a permanent note? → `Ctrl+Shift+P` → tag `domain: ia-ot`
+
+**CAP PNs written this week:**
+-
+
+---
+
 ## 9. Brain dump
 
 *Anything still on your mind — questions, observations, ideas, things to research, things to tell people. Get it out. Process anything actionable into Todoist after the review.*

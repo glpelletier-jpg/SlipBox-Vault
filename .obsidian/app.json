@@ -1,3 +1,4 @@
 {
-  "promptDelete": false
+  "promptDelete": false,
+  "mobilePullAction": "mobile:quick-action"
 }

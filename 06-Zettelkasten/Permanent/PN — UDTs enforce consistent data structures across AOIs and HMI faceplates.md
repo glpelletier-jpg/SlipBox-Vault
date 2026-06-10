@@ -34,13 +34,19 @@ cap_domain: ""
 
 ## Cross-links
 ### Supports
-- [[PN — ]]
+- *(link permanent notes here)*
 
 ### Contradicts / tensions
-- [[PN — ]]
+- *(link permanent notes here)*
 
 ### See also
-- [[PN — ]]
+- *(link permanent notes here)*
+
+### Source material
+- [[05-Resources/Courses/PLC Architecture/PLC Architecture — Overview|PLC Architecture (course)]]
+
+### Applied in
+- [[02-Quests/New-Role-Integration-Q3-2026|New Role Integration Q3]]
 
 ---
 

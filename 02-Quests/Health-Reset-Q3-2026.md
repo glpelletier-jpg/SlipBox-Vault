@@ -88,3 +88,17 @@ Quest created. Starting from scratch — 30–45 min/day available. Focus is exe
 > Each top-level milestone (Month 1, 2, 3, and final completion) = 25 points.
 > The dashboard health indicator tracks this number against time elapsed in the quarter.
 
+---
+
+## Knowledge connections (Zettelkasten)
+
+*Permanent notes whose principles apply directly to this quest.*
+
+- [[06-Zettelkasten/Permanent/small-consistent-actions-compound-into-disproportionate-outcomes|PN — Small consistent actions compound]] — 1% daily improvement, not intensity sprints
+- [[06-Zettelkasten/Permanent/flow-requires-challenge-calibrated-just-above-current-skill|PN — Flow requires challenge calibrated above skill]] — calibrate workout difficulty to stay in the growth zone
+- [[06-Zettelkasten/Permanent/longevity-is-stronger-evidence-of-future-value-than-novelty|PN — Longevity is stronger evidence than novelty]] — sustainable habits beat optimized but fragile protocols
+
+---
+
+**Links:** [[01-Vision/life-compass|Life Compass]] | [[01-Vision/future-vision|Future Vision]] | [[02-Quests/New-Role-Integration-Q3-2026|New Role Integration Q3]]
+

@@ -1,0 +1,30 @@
+filters:
+  and:
+    - file.inFolder("07-Work-Knowledge/Troubleshooting")
+    - type == "troubleshooting"
+formulas:
+  status_icon: if(status == "open", "🔴 Open", if(status == "closed", "✅ Closed", if(status == "in-progress", "🟡 In progress", "—")))
+  modified_label: file.mtime.format("MMM D, YYYY")
+properties:
+  note.title:
+    displayName: Issue
+  note.equipment:
+    displayName: Equipment
+  note.system_area:
+    displayName: Area
+  formula.status_icon:
+    displayName: Status
+  formula.modified_label:
+    displayName: Last updated
+views:
+  - type: table
+    name: Recent logs
+    order:
+      - title
+      - equipment
+      - formula.status_icon
+      - formula.modified_label
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 8

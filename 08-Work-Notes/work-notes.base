@@ -1,0 +1,173 @@
+filters:
+  and:
+    - file.inFolder("08-Work-Notes")
+    - file.name != "08-Work-Notes"
+    - file.name != "Work-Note-Template"
+    - file.name != "Work-Notes-Guide"
+    - file.ext == "md"
+    - type == "work-note"
+formulas:
+  age_days: if(date, (today() - date(date)).days, "")
+  status_icon: if(status == "closed", "✅ Closed", if(promoted_to != "", "🔗 Escalated", if(status == "on-hold", "⏸ On Hold", if(status == "in-progress", "🔄 In Progress", "🔴 Open"))))
+  priority_icon: if(priority == "high", "🔴 High", if(priority == "normal", "🟡 Normal", "🟢 Low"))
+  location_display: if(building != "" && area != "", building + " › " + area, if(building != "", building, if(area != "", area, "—")))
+  device_display: if(device != "" && equipment != "", equipment + " / " + device, if(equipment != "", equipment, if(device != "", device, "—")))
+  system_icon: if(system == "OT-network", "🌐 OT-network", if(system == "utilities", "⚙️ Utilities", if(system == "HVAC", "💨 HVAC", if(system == "production", "🏭 Production", if(system != "", system, "—")))))
+  has_wo: if(work_order != "", "📋 " + work_order, "")
+  has_todoist: if(linked_todoist != "", "✔ " + linked_todoist, "")
+properties:
+  note.date:
+    displayName: Date
+  note.time:
+    displayName: Time
+  note.building:
+    displayName: Building
+  note.area:
+    displayName: Area
+  note.system:
+    displayName: System
+  note.equipment:
+    displayName: Equipment
+  note.device:
+    displayName: Device
+  note.status:
+    displayName: Status
+  note.priority:
+    displayName: Priority
+  note.work_order:
+    displayName: Work Order
+  note.linked_todoist:
+    displayName: Todoist Task
+  note.promoted_to:
+    displayName: Promoted To
+  formula.status_icon:
+    displayName: Status
+  formula.priority_icon:
+    displayName: Priority
+  formula.system_icon:
+    displayName: System
+  formula.location_display:
+    displayName: Location
+  formula.device_display:
+    displayName: Equipment / Device
+  formula.age_days:
+    displayName: Age (days)
+  formula.has_wo:
+    displayName: WO#
+  formula.has_todoist:
+    displayName: Todoist
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - formula.location_display
+      - formula.system_icon
+      - formula.device_display
+      - formula.status_icon
+      - formula.priority_icon
+      - date
+      - formula.age_days
+      - formula.has_wo
+      - formula.has_todoist
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: SHA 1
+    filters:
+      and:
+        - building == "SHA 1"
+    order:
+      - file.name
+      - area
+      - formula.system_icon
+      - formula.device_display
+      - formula.status_icon
+      - formula.priority_icon
+      - date
+      - formula.age_days
+      - formula.has_wo
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: SHA 2
+    filters:
+      and:
+        - building == "SHA 2"
+    order:
+      - file.name
+      - area
+      - formula.system_icon
+      - formula.device_display
+      - formula.status_icon
+      - formula.priority_icon
+      - date
+      - formula.age_days
+      - formula.has_wo
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: OT Network
+    filters:
+      and:
+        - system == "OT-network"
+    order:
+      - file.name
+      - formula.location_display
+      - formula.device_display
+      - formula.status_icon
+      - formula.priority_icon
+      - date
+      - formula.age_days
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Open / High Priority
+    filters:
+      and:
+        - status != "closed"
+        - priority == "high"
+    order:
+      - file.name
+      - formula.location_display
+      - formula.system_icon
+      - formula.device_display
+      - formula.status_icon
+      - date
+      - formula.age_days
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Escalated
+    filters:
+      and:
+        - promoted_to != ""
+    order:
+      - file.name
+      - formula.location_display
+      - formula.device_display
+      - promoted_to
+      - date
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Has Work Order
+    filters:
+      and:
+        - work_order != ""
+    order:
+      - file.name
+      - formula.has_wo
+      - formula.location_display
+      - formula.device_display
+      - formula.status_icon
+      - date
+    sort:
+      - property: date
+        direction: DESC

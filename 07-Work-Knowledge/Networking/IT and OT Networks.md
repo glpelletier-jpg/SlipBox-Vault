@@ -176,5 +176,10 @@ IT can leverage the skills and expertise acquired in deploying modern enterprise
 
 - **Protocols & Connectivity:** IT uses standard TCP/IP and HTTP/HTTPS. OT relies on specialized, often older, industrial protocols like Modbus, PROFINET, and DNP3, which may lack built-in security. 
 
-**Impact of Failures:**A failure in an IT network usually leads to data loss, financial loss, or reputational damage. A failure in an OT network can directly cause physical damage to infrastructure, environmental disasters, or endanger human lives. 
+**Impact of Failures:**A failure in an IT network usually leads to data loss, financial loss, or reputational damage. A failure in an OT network can directly cause physical damage to infrastructure, environmental disasters, or endanger human lives.
 
+---
+
+**Permanent notes:** [[06-Zettelkasten/Permanent/PN — Purdue model zones define trust boundaries — cross-zone traffic requires explicit firewall rules|PN — Purdue model zones]] | [[06-Zettelkasten/Permanent/PN — A DMZ between Level 3 and Level 4 prevents direct IT-to-OT routed connections|PN — DMZ L3–L4]] | [[06-Zettelkasten/Permanent/PN — NIST 800-82 Rev 3 extends ICS guidance to cloud-connected and remote-access scenarios|PN — NIST 800-82]] | [[06-Zettelkasten/Permanent/PN — Unmanaged switches in OT environments eliminate VLAN segmentation and span tree visibility|PN — Unmanaged switches]] | [[06-Zettelkasten/Permanent/PN — PROFINET uses standard Ethernet but requires managed switches with QoS and IGMP snooping|PN — PROFINET]]
+
+**Links:** [[07-Work-Knowledge/07-Work-Knowledge|Work Knowledge]] | [[06-Zettelkasten/MOC/Automation Engineering MOC|Automation MOC]]

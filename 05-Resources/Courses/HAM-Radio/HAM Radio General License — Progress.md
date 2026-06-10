@@ -65,6 +65,7 @@ dv.paragraph(`**Total sessions logged:** ${sessions.length}  ·  **Practice exam
 ### Week 1 — G1 Commission's Rules (starts Jun 8)
 
 - 2026-06-08 · Week 1 / G1A-G1B · [duration:: 0] · Notes: *first session — starting G1*
+- 2026-06-09 · Week 1 / G1A-G1D · [duration:: 45] · Notes: G1A–G1D read; all four sub-elements covered — update duration if you tracked actual minutes
 
 ### Week 2 — G2 Operating Procedures
 
@@ -101,6 +102,16 @@ dv.paragraph(`**Total sessions logged:** ${sessions.length}  ·  **Practice exam
 ### Week 10 — G0 Safety + Final Review
 
 -
+
+---
+
+## Permanent notes extracted
+
+*Any claim from HAM study strong enough to stand alone as a permanent note. One claim, one note — `Ctrl+Shift+P`.*
+
+| PN title | Subelement | Date | Status |
+|---|---|---|---|
+| | | | |
 
 ---
 

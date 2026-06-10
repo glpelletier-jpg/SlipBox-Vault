@@ -73,6 +73,26 @@
     {
       "folder": "03-Reviews/Workouts",
       "template": "_templates/Workout Log Template.md"
+    },
+    {
+      "folder": "_reference/Work/People",
+      "template": "_templates/Argenta-Person.md"
+    },
+    {
+      "folder": "_reference/Work/Locations",
+      "template": "_templates/Argenta-Location.md"
+    },
+    {
+      "folder": "_reference/Work/Systems",
+      "template": "_templates/Argenta-System.md"
+    },
+    {
+      "folder": "_reference/Work/Equipment",
+      "template": "_templates/Argenta-Equipment.md"
+    },
+    {
+      "folder": "08-Work-Notes",
+      "template": "_templates/Work-Note-Template.md"
     }
   ],
   "enable_file_templates": false,

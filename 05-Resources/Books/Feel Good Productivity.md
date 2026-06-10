@@ -35,7 +35,7 @@ tags: [book]
 
 ## Linked notes
 
-**Literature note:** [[06-Zettelkasten/Literature/Feel Good Productivity|Literature note]]
+**Literature note:** [[06-Zettelkasten/Literature/Feel Good Productivity - Ali Abdaal|Literature note]]
 
 ---
 
